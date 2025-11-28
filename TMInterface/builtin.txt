@@ -1,0 +1,66 @@
+set "log_bot" false
+set "execute_commands" true
+set "bf_target" "finish"
+set "bf_condition_speed" 0
+set "countdown_speed" 70
+set "speed" 70
+set "bf_play_sound" false
+set "save_triggers" false
+set "replay_speed" 1
+set "log_simulation" false
+set "autorewind" false
+set "discord_presence" false
+set "background" "none"
+set "trigger_default_color" "255,38,38,76"
+set "bf_eval_min_time" 0
+set "mass_validation_timeout" true
+set "trigger_hit_color" "115,255,87,76"
+set "sim_priority" "none"
+set "viz_type" "standard"
+set "controller" "none"
+set "cmd_steer_offset" 0
+set "bf_modify_count" 5
+set "start_respawn" true
+set "input_steer_display" true
+set "bf_max_steer_diff" 10000
+set "sim_speed" 5
+set "bf_max_time_diff" 0
+set "bf_override_stop_time" 0
+set "bf_result_filename" "result.txt"
+set "disable_forced_camera" true
+set "bf_inputs_min_time" 0
+set "bf_inputs_max_time" 0
+set "bf_inputs_fill_steer" true
+set "high_replay_sample_rate" false
+set "bf_target_trigger" -1
+set "bf_target_cp" -1
+set "bf_target_point" ""
+set "bf_weight" 0
+set "random_seed" -1
+set "bf_eval_max_time" 0
+set "bf_keep_all_cps" true
+set "sim_debug" false
+set "ingame_real_speed_display" false
+set "bf_trigger_eval" "distance"
+set "auto_reload_plugins" true
+set "format_decimal_time" true
+set "autorewind_nofinish" true
+set "format_relative_time" false
+set "format_separate_rel" false
+set "autologin" "1"
+set "sim_show_valid_window" false
+set "sim_convert_analog" false
+set "skip_map_load_screens" true
+set "run_editor_cursor_preview" false
+set "cmd_steer_invert" false
+set "cmd_steer_multiplier" 1
+set "replay_takeover" true
+set "unfocused_fps_limit" false
+set "plugin_python_link_enabled" true
+set "custom_port" 8775
+toggle_triggers
+bg_input_color 255,255,255,217
+steer_color 255,172,48,255
+acceleration_color 0,255,0,255
+brake_color 255,0,0,255
+steer_text_color 0,0,0,255

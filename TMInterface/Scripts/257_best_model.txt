@@ -1,0 +1,2381 @@
+0-140.0 press up
+rel up
+140.0-280.0 press up
+rel up
+280.0-420.0 press up
+rel up
+420.0-560.0 press up
+rel up
+560.0-700.0 press up
+rel up
+700.0-840.0 press up
+rel up
+840.0-980.0 press up
+rel up
+980.0-1120.0 press up
+rel up
+1120.0-1260.0 press up
+rel up
+1260.0-1400.0 press up
+rel up
+1400.0-1540.0 press up
+rel up
+1540.0-1680.0 press up
+rel up
+1680.0-1820.0 press up
+rel up
+1820.0-1960.0 press up
+rel up
+1960.0-2100.0 press up
+rel up
+2100.0-2240.0 press up
+rel up
+2240.0-2380.0 press up
+rel up
+2380.0-2520.0 press up
+rel up
+2520.0-2660.0 press up
+rel up
+2660.0-2800.0 press up
+rel up
+2800.0-2940.0 press up
+rel up
+2940.0-3080.0 press up
+rel up
+3080.0-3220.0 press up
+rel up
+3220.0-3360.0 press up
+rel up
+3360.0-3500.0 press up
+rel up
+3500.0-3640.0 press left
+rel left
+3640.0-3780.0 press up
+rel up
+3780.0-3920.0 press up
+rel up
+3920.0-4060.0 press up
+rel up
+4060.0-4200.0 press up
+rel up
+4200.0-4340.0 press up
+rel up
+4340.0-4480.0 press up
+rel up
+4480.0-4620.0 press up
+rel up
+4620.0-4760.0 press up
+rel up
+4760.0-4900.0 press up
+rel up
+4900.0-5040.0 press up
+rel up
+5040.0-5180.0 press up
+rel up
+5180.0-5320.0 press right
+rel right
+5320.0-5460.0 press up
+rel up
+5460.0-5600.0 press up
+rel up
+5600.0-5740.0 press up
+rel up
+5740.0-5880.0 press up
+rel up
+5880.0-6020.0 press up
+rel up
+6020.0-6160.0 press up
+rel up
+6160.0-6300.0 press up
+rel up
+6300.0-6440.0 press up
+rel up
+6440.0-6580.0 press up
+rel up
+6580.0-6720.0 press up
+rel up
+6720.0-6860.0 press up
+rel up
+6860.0-7000.0 press up
+rel up
+7000.0-7140.0 press up
+rel up
+7140.0-7280.0 press up
+rel up
+7280.0-7420.0 press up
+rel up
+7420.0-7560.0 press up
+rel up
+7560.0-7700.0 press up
+rel up
+7700.0-7840.0 press up
+rel up
+7840.0-7980.0 press up
+rel up
+7980.0-8120.0 press up
+rel up
+8120.0-8260.0 press up
+rel up
+8260.0-8400.0 press up
+rel up
+8400.0-8540.0 press up
+rel up
+8540.0-8680.0 press up
+rel up
+8680.0-8820.0 press up
+rel up
+8820.0-8960.0 press up
+rel up
+8960.0-9100.0 press right
+rel right
+9100.0-9240.0 press up
+rel up
+9240.0-9380.0 press right
+rel right
+9380.0-9520.0 press up
+rel up
+9520.0-9660.0 press up
+rel up
+9660.0-9800.0 press up
+rel up
+9800.0-9940.0 press up
+rel up
+9940.0-10080.0 press up
+rel up
+10080.0-10220.0 press up
+rel up
+10220.0-10360.0 press up
+rel up
+10360.0-10500.0 press left
+rel left
+10500.0-10640.0 press up
+rel up
+10640.0-10780.0 press left
+rel left
+10780.0-10920.0 press up
+rel up
+10920.0-11060.0 press left
+rel left
+11060.0-11200.0 press up
+rel up
+11200.0-11340.0 press left
+rel left
+11340.0-11480.0 press up
+rel up
+11480.0-11620.0 press left
+rel left
+11620.0-11760.0 press up
+rel up
+11760.0-11900.0 press left
+rel left
+11900.0-12040.0 press up
+rel up
+12040.0-12180.0 press left
+rel left
+12180.0-12320.0 press up
+rel up
+12320.0-12460.0 press left
+rel left
+12460.0-12600.0 press up
+rel up
+12600.0-12740.0 press left
+rel left
+12740.0-12880.0 press up
+rel up
+12880.0-13020.0 press up
+rel up
+13020.0-13160.0 press up
+rel up
+13160.0-13300.0 press right
+rel right
+13300.0-13440.0 press up
+rel up
+13440.0-13580.0 press right
+rel right
+13580.0-13720.0 press up
+rel up
+13720.0-13860.0 press right
+rel right
+13860.0-14000.0 press up
+rel up
+14000.0-14140.0 press right
+rel right
+14140.0-14280.0 press up
+rel up
+14280.0-14420.0 press right
+rel right
+14420.0-14560.0 press up
+rel up
+14560.0-14700.0 press right
+rel right
+14700.0-14840.0 press left
+rel left
+14840.0-14980.0 press up
+rel up
+14980.0-15120.0 press left
+rel left
+15120.0-15260.0 press up
+rel up
+15260.0-15400.0 press left
+rel left
+15400.0-15540.0 press up
+rel up
+15540.0-15680.0 press left
+rel left
+15680.0-15820.0 press up
+rel up
+15820.0-15960.0 press left
+rel left
+15960.0-16100.0 press up
+rel up
+16100.0-16240.0 press left
+rel left
+16240.0-16380.0 press up
+rel up
+16380.0-16520.0 press left
+rel left
+16520.0-16660.0 press up
+rel up
+16660.0-16800.0 press left
+rel left
+16800.0-16940.0 press up
+rel up
+16940.0-17080.0 press left
+rel left
+17080.0-17220.0 press up
+rel up
+17220.0-17360.0 press left
+rel left
+17360.0-17500.0 press up
+rel up
+17500.0-17640.0 press left
+rel left
+17640.0-17780.0 press up
+rel up
+17780.0-17920.0 press left
+rel left
+17920.0-18060.0 press up
+rel up
+18060.0-18200.0 press left
+rel left
+18200.0-18340.0 press up
+rel up
+18340.0-18480.0 press left
+rel left
+18480.0-18620.0 press up
+rel up
+18620.0-18760.0 press left
+rel left
+18760.0-18900.0 press up
+rel up
+18900.0-19040.0 press left
+rel left
+19040.0-19180.0 press up
+rel up
+19180.0-19320.0 press left
+rel left
+19320.0-19460.0 press up
+rel up
+19460.0-19600.0 press left
+rel left
+19600.0-19740.0 press up
+rel up
+19740.0-19880.0 press left
+rel left
+19880.0-20020.0 press up
+rel up
+20020.0-20160.0 press left
+rel left
+20160.0-20300.0 press up
+rel up
+20300.0-20440.0 press left
+rel left
+20440.0-20580.0 press up
+rel up
+20580.0-20720.0 press left
+rel left
+20720.0-20860.0 press up
+rel up
+20860.0-21000.0 press left
+rel left
+21000.0-21140.0 press up
+rel up
+21140.0-21280.0 press left
+rel left
+21280.0-21420.0 press up
+rel up
+21420.0-21560.0 press left
+rel left
+21560.0-21700.0 press up
+rel up
+21700.0-21840.0 press left
+rel left
+21840.0-21980.0 press up
+rel up
+21980.0-22120.0 press left
+rel left
+22120.0-22260.0 press up
+rel up
+22260.0-22400.0 press left
+rel left
+22400.0-22540.0 press up
+rel up
+22540.0-22680.0 press left
+rel left
+22680.0-22820.0 press up
+rel up
+22820.0-22960.0 press left
+rel left
+22960.0-23100.0 press up
+rel up
+23100.0-23240.0 press left
+rel left
+23240.0-23380.0 press up
+rel up
+23380.0-23520.0 press left
+rel left
+23520.0-23660.0 press up
+rel up
+23660.0-23800.0 press left
+rel left
+23800.0-23940.0 press up
+rel up
+23940.0-24080.0 press left
+rel left
+24080.0-24220.0 press up
+rel up
+24220.0-24360.0 press left
+rel left
+24360.0-24500.0 press up
+rel up
+24500.0-24640.0 press left
+rel left
+24640.0-24780.0 press up
+rel up
+24780.0-24920.0 press left
+rel left
+24920.0-25060.0 press up
+rel up
+25060.0-25200.0 press left
+rel left
+25200.0-25340.0 press up
+rel up
+25340.0-25480.0 press left
+rel left
+25480.0-25620.0 press up
+rel up
+25620.0-25760.0 press up
+rel up
+25760.0-25900.0 press right
+rel right
+25900.0-26040.0 press up
+rel up
+26040.0-26180.0 press right
+rel right
+26180.0-26320.0 press up
+rel up
+26320.0-26460.0 press right
+rel right
+26460.0-26600.0 press up
+rel up
+26600.0-26740.0 press right
+rel right
+26740.0-26880.0 press up
+rel up
+26880.0-27020.0 press right
+rel right
+27020.0-27160.0 press up
+rel up
+27160.0-27300.0 press right
+rel right
+27300.0-27440.0 press up
+rel up
+27440.0-27580.0 press right
+rel right
+27580.0-27720.0 press up
+rel up
+27720.0-27860.0 press right
+rel right
+27860.0-28000.0 press right
+rel right
+28000.0-28140.0 press up
+rel up
+28140.0-28280.0 press right
+rel right
+28280.0-28420.0 press up
+rel up
+28420.0-28560.0 press right
+rel right
+28560.0-28700.0 press right
+rel right
+28700.0-28840.0 press left
+rel left
+28840.0-28980.0 press up
+rel up
+28980.0-29120.0 press left
+rel left
+29120.0-29260.0 press up
+rel up
+29260.0-29400.0 press left
+rel left
+29400.0-29540.0 press up
+rel up
+29540.0-29680.0 press left
+rel left
+29680.0-29820.0 press up
+rel up
+29820.0-29960.0 press left
+rel left
+29960.0-30100.0 press up
+rel up
+30100.0-30240.0 press left
+rel left
+30240.0-30380.0 press up
+rel up
+30380.0-30520.0 press left
+rel left
+30520.0-30660.0 press up
+rel up
+30660.0-30800.0 press left
+rel left
+30800.0-30940.0 press up
+rel up
+30940.0-31080.0 press left
+rel left
+31080.0-31220.0 press up
+rel up
+31220.0-31360.0 press left
+rel left
+31360.0-31500.0 press up
+rel up
+31500.0-31640.0 press left
+rel left
+31640.0-31780.0 press up
+rel up
+31780.0-31920.0 press left
+rel left
+31920.0-32060.0 press up
+rel up
+32060.0-32200.0 press left
+rel left
+32200.0-32340.0 press up
+rel up
+32340.0-32480.0 press left
+rel left
+32480.0-32620.0 press up
+rel up
+32620.0-32760.0 press left
+rel left
+32760.0-32900.0 press up
+rel up
+32900.0-33040.0 press left
+rel left
+33040.0-33180.0 press up
+rel up
+33180.0-33320.0 press left
+rel left
+33320.0-33460.0 press up
+rel up
+33460.0-33600.0 press left
+rel left
+33600.0-33740.0 press up
+rel up
+33740.0-33880.0 press up
+rel up
+33880.0-34020.0 press up
+rel up
+34020.0-34160.0 press right
+rel right
+34160.0-34300.0 press up
+rel up
+34300.0-34440.0 press right
+rel right
+34440.0-34580.0 press up
+rel up
+34580.0-34720.0 press right
+rel right
+34720.0-34860.0 press up
+rel up
+34860.0-35000.0 press right
+rel right
+35000.0-35140.0 press up
+rel up
+35140.0-35280.0 press right
+rel right
+35280.0-35420.0 press up
+rel up
+35420.0-35560.0 press right
+rel right
+35560.0-35700.0 press up
+rel up
+35700.0-35840.0 press right
+rel right
+35840.0-35980.0 press up
+rel up
+35980.0-36120.0 press right
+rel right
+36120.0-36260.0 press up
+rel up
+36260.0-36400.0 press right
+rel right
+36400.0-36540.0 press up
+rel up
+36540.0-36680.0 press right
+rel right
+36680.0-36820.0 press up
+rel up
+36820.0-36960.0 press right
+rel right
+36960.0-37100.0 press up
+rel up
+37100.0-37240.0 press right
+rel right
+37240.0-37380.0 press up
+rel up
+37380.0-37520.0 press right
+rel right
+37520.0-37660.0 press up
+rel up
+37660.0-37800.0 press right
+rel right
+37800.0-37940.0 press up
+rel up
+37940.0-38080.0 press right
+rel right
+38080.0-38220.0 press up
+rel up
+38220.0-38360.0 press right
+rel right
+38360.0-38500.0 press up
+rel up
+38500.0-38640.0 press up
+rel up
+38640.0-38780.0 press up
+rel up
+38780.0-38920.0 press up
+rel up
+38920.0-39060.0 press up
+rel up
+39060.0-39200.0 press up
+rel up
+39200.0-39340.0 press up
+rel up
+39340.0-39480.0 press up
+rel up
+39480.0-39620.0 press up
+rel up
+39620.0-39760.0 press left
+rel left
+39760.0-39900.0 press up
+rel up
+39900.0-40040.0 press left
+rel left
+40040.0-40180.0 press up
+rel up
+40180.0-40320.0 press left
+rel left
+40320.0-40460.0 press up
+rel up
+40460.0-40600.0 press left
+rel left
+40600.0-40740.0 press up
+rel up
+40740.0-40880.0 press left
+rel left
+40880.0-41020.0 press up
+rel up
+41020.0-41160.0 press up
+rel up
+41160.0-41300.0 press up
+rel up
+41300.0-41440.0 press up
+rel up
+41440.0-41580.0 press up
+rel up
+41580.0-41720.0 press right
+rel right
+41720.0-41860.0 press up
+rel up
+41860.0-42000.0 press right
+rel right
+42000.0-42140.0 press up
+rel up
+42140.0-42280.0 press right
+rel right
+42280.0-42420.0 press up
+rel up
+42420.0-42560.0 press right
+rel right
+42560.0-42700.0 press up
+rel up
+42700.0-42840.0 press right
+rel right
+42840.0-42980.0 press up
+rel up
+42980.0-43120.0 press right
+rel right
+43120.0-43260.0 press up
+rel up
+43260.0-43400.0 press right
+rel right
+43400.0-43540.0 press up
+rel up
+43540.0-43680.0 press right
+rel right
+43680.0-43820.0 press up
+rel up
+43820.0-43960.0 press right
+rel right
+43960.0-44100.0 press up
+rel up
+44100.0-44240.0 press right
+rel right
+44240.0-44380.0 press up
+rel up
+44380.0-44520.0 press right
+rel right
+44520.0-44660.0 press up
+rel up
+44660.0-44800.0 press right
+rel right
+44800.0-44940.0 press up
+rel up
+44940.0-45080.0 press right
+rel right
+45080.0-45220.0 press up
+rel up
+45220.0-45360.0 press right
+rel right
+45360.0-45500.0 press up
+rel up
+45500.0-45640.0 press right
+rel right
+45640.0-45780.0 press up
+rel up
+45780.0-45920.0 press right
+rel right
+45920.0-46060.0 press up
+rel up
+46060.0-46200.0 press right
+rel right
+46200.0-46340.0 press up
+rel up
+46340.0-46480.0 press right
+rel right
+46480.0-46620.0 press up
+rel up
+46620.0-46760.0 press right
+rel right
+46760.0-46900.0 press up
+rel up
+46900.0-47040.0 press right
+rel right
+47040.0-47180.0 press up
+rel up
+47180.0-47320.0 press right
+rel right
+47320.0-47460.0 press up
+rel up
+47460.0-47600.0 press right
+rel right
+47600.0-47740.0 press up
+rel up
+47740.0-47880.0 press right
+rel right
+47880.0-48020.0 press up
+rel up
+48020.0-48160.0 press right
+rel right
+48160.0-48300.0 press up
+rel up
+48300.0-48440.0 press right
+rel right
+48440.0-48580.0 press up
+rel up
+48580.0-48720.0 press right
+rel right
+48720.0-48860.0 press up
+rel up
+48860.0-49000.0 press right
+rel right
+49000.0-49140.0 press up
+rel up
+49140.0-49280.0 press right
+rel right
+49280.0-49420.0 press up
+rel up
+49420.0-49560.0 press right
+rel right
+49560.0-49700.0 press up
+rel up
+49700.0-49840.0 press right
+rel right
+49840.0-49980.0 press up
+rel up
+49980.0-50120.0 press right
+rel right
+50120.0-50260.0 press up
+rel up
+50260.0-50400.0 press right
+rel right
+50400.0-50540.0 press up
+rel up
+50540.0-50680.0 press right
+rel right
+50680.0-50820.0 press up
+rel up
+50820.0-50960.0 press right
+rel right
+50960.0-51100.0 press up
+rel up
+51100.0-51240.0 press right
+rel right
+51240.0-51380.0 press up
+rel up
+51380.0-51520.0 press right
+rel right
+51520.0-51660.0 press up
+rel up
+51660.0-51800.0 press right
+rel right
+51800.0-51940.0 press up
+rel up
+51940.0-52080.0 press right
+rel right
+52080.0-52220.0 press up
+rel up
+52220.0-52360.0 press right
+rel right
+52360.0-52500.0 press up
+rel up
+52500.0-52640.0 press right
+rel right
+52640.0-52780.0 press up
+rel up
+52780.0-52920.0 press right
+rel right
+52920.0-53060.0 press up
+rel up
+53060.0-53200.0 press right
+rel right
+53200.0-53340.0 press up
+rel up
+53340.0-53480.0 press right
+rel right
+53480.0-53620.0 press up
+rel up
+53620.0-53760.0 press right
+rel right
+53760.0-53900.0 press up
+rel up
+53900.0-54040.0 press right
+rel right
+54040.0-54180.0 press up
+rel up
+54180.0-54320.0 press right
+rel right
+54320.0-54460.0 press up
+rel up
+54460.0-54600.0 press right
+rel right
+54600.0-54740.0 press up
+rel up
+54740.0-54880.0 press right
+rel right
+54880.0-55020.0 press right
+rel right
+55020.0-55160.0 press right
+rel right
+55160.0-55300.0 press right
+rel right
+55300.0-55440.0 press right
+rel right
+55440.0-55580.0 press left
+rel left
+55580.0-55720.0 press up
+rel up
+55720.0-55860.0 press left
+rel left
+55860.0-56000.0 press up
+rel up
+56000.0-56140.0 press left
+rel left
+56140.0-56280.0 press up
+rel up
+56280.0-56420.0 press left
+rel left
+56420.0-56560.0 press up
+rel up
+56560.0-56700.0 press left
+rel left
+56700.0-56840.0 press up
+rel up
+56840.0-56980.0 press left
+rel left
+56980.0-57120.0 press up
+rel up
+57120.0-57260.0 press left
+rel left
+57260.0-57400.0 press up
+rel up
+57400.0-57540.0 press left
+rel left
+57540.0-57680.0 press up
+rel up
+57680.0-57820.0 press left
+rel left
+57820.0-57960.0 press up
+rel up
+57960.0-58100.0 press left
+rel left
+58100.0-58240.0 press up
+rel up
+58240.0-58380.0 press left
+rel left
+58380.0-58520.0 press up
+rel up
+58520.0-58660.0 press left
+rel left
+58660.0-58800.0 press up
+rel up
+58800.0-58940.0 press left
+rel left
+58940.0-59080.0 press up
+rel up
+59080.0-59220.0 press left
+rel left
+59220.0-59360.0 press up
+rel up
+59360.0-59500.0 press left
+rel left
+59500.0-59640.0 press up
+rel up
+59640.0-59780.0 press left
+rel left
+59780.0-59920.0 press up
+rel up
+59920.0-60060.0 press left
+rel left
+60060.0-60200.0 press up
+rel up
+60200.0-60340.0 press left
+rel left
+60340.0-60480.0 press up
+rel up
+60480.0-60620.0 press left
+rel left
+60620.0-60760.0 press up
+rel up
+60760.0-60900.0 press left
+rel left
+60900.0-61040.0 press up
+rel up
+61040.0-61180.0 press left
+rel left
+61180.0-61320.0 press up
+rel up
+61320.0-61460.0 press left
+rel left
+61460.0-61600.0 press up
+rel up
+61600.0-61740.0 press left
+rel left
+61740.0-61880.0 press up
+rel up
+61880.0-62020.0 press left
+rel left
+62020.0-62160.0 press up
+rel up
+62160.0-62300.0 press left
+rel left
+62300.0-62440.0 press up
+rel up
+62440.0-62580.0 press left
+rel left
+62580.0-62720.0 press up
+rel up
+62720.0-62860.0 press left
+rel left
+62860.0-63000.0 press up
+rel up
+63000.0-63140.0 press left
+rel left
+63140.0-63280.0 press up
+rel up
+63280.0-63420.0 press left
+rel left
+63420.0-63560.0 press up
+rel up
+63560.0-63700.0 press up
+rel up
+63700.0-63840.0 press left
+rel left
+63840.0-63980.0 press up
+rel up
+63980.0-64120.0 press left
+rel left
+64120.0-64260.0 press up
+rel up
+64260.0-64400.0 press left
+rel left
+64400.0-64540.0 press up
+rel up
+64540.0-64680.0 press up
+rel up
+64680.0-64820.0 press left
+rel left
+64820.0-64960.0 press up
+rel up
+64960.0-65100.0 press up
+rel up
+65100.0-65240.0 press up
+rel up
+65240.0-65380.0 press right
+rel right
+65380.0-65520.0 press up
+rel up
+65520.0-65660.0 press right
+rel right
+65660.0-65800.0 press up
+rel up
+65800.0-65940.0 press right
+rel right
+65940.0-66080.0 press up
+rel up
+66080.0-66220.0 press up
+rel up
+66220.0-66360.0 press up
+rel up
+66360.0-66500.0 press up
+rel up
+66500.0-66640.0 press up
+rel up
+66640.0-66780.0 press up
+rel up
+66780.0-66920.0 press up
+rel up
+66920.0-67060.0 press left
+rel left
+67060.0-67200.0 press up
+rel up
+67200.0-67340.0 press left
+rel left
+67340.0-67480.0 press up
+rel up
+67480.0-67620.0 press left
+rel left
+67620.0-67760.0 press up
+rel up
+67760.0-67900.0 press left
+rel left
+67900.0-68040.0 press up
+rel up
+68040.0-68180.0 press left
+rel left
+68180.0-68320.0 press up
+rel up
+68320.0-68460.0 press up
+rel up
+68460.0-68600.0 press up
+rel up
+68600.0-68740.0 press up
+rel up
+68740.0-68880.0 press up
+rel up
+68880.0-69020.0 press up
+rel up
+69020.0-69160.0 press up
+rel up
+69160.0-69300.0 press up
+rel up
+69300.0-69440.0 press up
+rel up
+69440.0-69580.0 press up
+rel up
+69580.0-69720.0 press up
+rel up
+69720.0-69860.0 press up
+rel up
+69860.0-70000.0 press left
+rel left
+70000.0-70140.0 press down
+rel down
+70140.0-70280.0 press left
+rel left
+70280.0-70420.0 press up
+rel up
+70420.0-70560.0 press up
+rel up
+70560.0-70700.0 press up
+rel up
+70700.0-70840.0 press up
+rel up
+70840.0-70980.0 press left
+rel left
+70980.0-71120.0 press down
+rel down
+71120.0-71260.0 press left
+rel left
+71260.0-71400.0 press down
+rel down
+71400.0-71540.0 press right
+rel right
+71540.0-71680.0 press right
+rel right
+71680.0-71820.0 press left
+rel left
+71820.0-71960.0 press down
+rel down
+71960.0-72100.0 press right
+rel right
+72100.0-72240.0 press right
+rel right
+72240.0-72380.0 press right
+rel right
+72380.0-72520.0 press right
+rel right
+72520.0-72660.0 press right
+rel right
+72660.0-72800.0 press right
+rel right
+72800.0-72940.0 press right
+rel right
+72940.0-73080.0 press up
+rel up
+73080.0-73220.0 press right
+rel right
+73220.0-73360.0 press up
+rel up
+73360.0-73500.0 press right
+rel right
+73500.0-73640.0 press up
+rel up
+73640.0-73780.0 press right
+rel right
+73780.0-73920.0 press up
+rel up
+73920.0-74060.0 press right
+rel right
+74060.0-74200.0 press up
+rel up
+74200.0-74340.0 press right
+rel right
+74340.0-74480.0 press up
+rel up
+74480.0-74620.0 press right
+rel right
+74620.0-74760.0 press up
+rel up
+74760.0-74900.0 press right
+rel right
+74900.0-75040.0 press up
+rel up
+75040.0-75180.0 press right
+rel right
+75180.0-75320.0 press up
+rel up
+75320.0-75460.0 press right
+rel right
+75460.0-75600.0 press up
+rel up
+75600.0-75740.0 press right
+rel right
+75740.0-75880.0 press up
+rel up
+75880.0-76020.0 press right
+rel right
+76020.0-76160.0 press up
+rel up
+76160.0-76300.0 press right
+rel right
+76300.0-76440.0 press up
+rel up
+76440.0-76580.0 press up
+rel up
+76580.0-76720.0 press up
+rel up
+76720.0-76860.0 press up
+rel up
+76860.0-77000.0 press up
+rel up
+77000.0-77140.0 press up
+rel up
+77140.0-77280.0 press up
+rel up
+77280.0-77420.0 press up
+rel up
+77420.0-77560.0 press up
+rel up
+77560.0-77700.0 press up
+rel up
+77700.0-77840.0 press up
+rel up
+77840.0-77980.0 press up
+rel up
+77980.0-78120.0 press up
+rel up
+78120.0-78260.0 press up
+rel up
+78260.0-78400.0 press up
+rel up
+78400.0-78540.0 press up
+rel up
+78540.0-78680.0 press up
+rel up
+78680.0-78820.0 press up
+rel up
+78820.0-78960.0 press up
+rel up
+78960.0-79100.0 press up
+rel up
+79100.0-79240.0 press up
+rel up
+79240.0-79380.0 press up
+rel up
+79380.0-79520.0 press up
+rel up
+79520.0-79660.0 press left
+rel left
+79660.0-79800.0 press up
+rel up
+79800.0-79940.0 press up
+rel up
+79940.0-80080.0 press up
+rel up
+80080.0-80220.0 press right
+rel right
+80220.0-80360.0 press right
+rel right
+80360.0-80500.0 press up
+rel up
+80500.0-80640.0 press right
+rel right
+80640.0-80780.0 press right
+rel right
+80780.0-80920.0 press up
+rel up
+80920.0-81060.0 press right
+rel right
+81060.0-81200.0 press up
+rel up
+81200.0-81340.0 press right
+rel right
+81340.0-81480.0 press up
+rel up
+81480.0-81620.0 press right
+rel right
+81620.0-81760.0 press up
+rel up
+81760.0-81900.0 press right
+rel right
+81900.0-82040.0 press up
+rel up
+82040.0-82180.0 press right
+rel right
+82180.0-82320.0 press up
+rel up
+82320.0-82460.0 press right
+rel right
+82460.0-82600.0 press up
+rel up
+82600.0-82740.0 press right
+rel right
+82740.0-82880.0 press up
+rel up
+82880.0-83020.0 press right
+rel right
+83020.0-83160.0 press up
+rel up
+83160.0-83300.0 press right
+rel right
+83300.0-83440.0 press up
+rel up
+83440.0-83580.0 press right
+rel right
+83580.0-83720.0 press up
+rel up
+83720.0-83860.0 press right
+rel right
+83860.0-84000.0 press up
+rel up
+84000.0-84140.0 press right
+rel right
+84140.0-84280.0 press up
+rel up
+84280.0-84420.0 press right
+rel right
+84420.0-84560.0 press up
+rel up
+84560.0-84700.0 press right
+rel right
+84700.0-84840.0 press up
+rel up
+84840.0-84980.0 press right
+rel right
+84980.0-85120.0 press up
+rel up
+85120.0-85260.0 press right
+rel right
+85260.0-85400.0 press up
+rel up
+85400.0-85540.0 press right
+rel right
+85540.0-85680.0 press up
+rel up
+85680.0-85820.0 press right
+rel right
+85820.0-85960.0 press right
+rel right
+85960.0-86100.0 press up
+rel up
+86100.0-86240.0 press right
+rel right
+86240.0-86380.0 press right
+rel right
+86380.0-86520.0 press right
+rel right
+86520.0-86660.0 press right
+rel right
+86660.0-86800.0 press right
+rel right
+86800.0-86940.0 press up
+rel up
+86940.0-87080.0 press up
+rel up
+87080.0-87220.0 press up
+rel up
+87220.0-87360.0 press up
+rel up
+87360.0-87500.0 press up
+rel up
+87500.0-87640.0 press up
+rel up
+87640.0-87780.0 press up
+rel up
+87780.0-87920.0 press up
+rel up
+87920.0-88060.0 press up
+rel up
+88060.0-88200.0 press up
+rel up
+88200.0-88340.0 press up
+rel up
+88340.0-88480.0 press up
+rel up
+88480.0-88620.0 press up
+rel up
+88620.0-88760.0 press left
+rel left
+88760.0-88900.0 press up
+rel up
+88900.0-89040.0 press left
+rel left
+89040.0-89180.0 press up
+rel up
+89180.0-89320.0 press left
+rel left
+89320.0-89460.0 press up
+rel up
+89460.0-89600.0 press left
+rel left
+89600.0-89740.0 press up
+rel up
+89740.0-89880.0 press left
+rel left
+89880.0-90020.0 press up
+rel up
+90020.0-90160.0 press left
+rel left
+90160.0-90300.0 press up
+rel up
+90300.0-90440.0 press left
+rel left
+90440.0-90580.0 press up
+rel up
+90580.0-90720.0 press left
+rel left
+90720.0-90860.0 press up
+rel up
+90860.0-91000.0 press left
+rel left
+91000.0-91140.0 press up
+rel up
+91140.0-91280.0 press left
+rel left
+91280.0-91420.0 press up
+rel up
+91420.0-91560.0 press left
+rel left
+91560.0-91700.0 press up
+rel up
+91700.0-91840.0 press left
+rel left
+91840.0-91980.0 press up
+rel up
+91980.0-92120.0 press left
+rel left
+92120.0-92260.0 press up
+rel up
+92260.0-92400.0 press left
+rel left
+92400.0-92540.0 press up
+rel up
+92540.0-92680.0 press left
+rel left
+92680.0-92820.0 press up
+rel up
+92820.0-92960.0 press right
+rel right
+92960.0-93100.0 press right
+rel right
+93100.0-93240.0 press right
+rel right
+93240.0-93380.0 press right
+rel right
+93380.0-93520.0 press up
+rel up
+93520.0-93660.0 press right
+rel right
+93660.0-93800.0 press up
+rel up
+93800.0-93940.0 press right
+rel right
+93940.0-94080.0 press up
+rel up
+94080.0-94220.0 press right
+rel right
+94220.0-94360.0 press up
+rel up
+94360.0-94500.0 press right
+rel right
+94500.0-94640.0 press up
+rel up
+94640.0-94780.0 press right
+rel right
+94780.0-94920.0 press up
+rel up
+94920.0-95060.0 press right
+rel right
+95060.0-95200.0 press right
+rel right
+95200.0-95340.0 press right
+rel right
+95340.0-95480.0 press up
+rel up
+95480.0-95620.0 press up
+rel up
+95620.0-95760.0 press up
+rel up
+95760.0-95900.0 press up
+rel up
+95900.0-96040.0 press up
+rel up
+96040.0-96180.0 press right
+rel right
+96180.0-96320.0 press up
+rel up
+96320.0-96460.0 press right
+rel right
+96460.0-96600.0 press up
+rel up
+96600.0-96740.0 press right
+rel right
+96740.0-96880.0 press up
+rel up
+96880.0-97020.0 press right
+rel right
+97020.0-97160.0 press up
+rel up
+97160.0-97300.0 press right
+rel right
+97300.0-97440.0 press up
+rel up
+97440.0-97580.0 press right
+rel right
+97580.0-97720.0 press up
+rel up
+97720.0-97860.0 press right
+rel right
+97860.0-98000.0 press up
+rel up
+98000.0-98140.0 press right
+rel right
+98140.0-98280.0 press up
+rel up
+98280.0-98420.0 press right
+rel right
+98420.0-98560.0 press up
+rel up
+98560.0-98700.0 press right
+rel right
+98700.0-98840.0 press up
+rel up
+98840.0-98980.0 press right
+rel right
+98980.0-99120.0 press up
+rel up
+99120.0-99260.0 press right
+rel right
+99260.0-99400.0 press up
+rel up
+99400.0-99540.0 press right
+rel right
+99540.0-99680.0 press up
+rel up
+99680.0-99820.0 press right
+rel right
+99820.0-99960.0 press up
+rel up
+99960.0-100100.0 press right
+rel right
+100100.0-100240.0 press up
+rel up
+100240.0-100380.0 press right
+rel right
+100380.0-100520.0 press up
+rel up
+100520.0-100660.0 press right
+rel right
+100660.0-100800.0 press up
+rel up
+100800.0-100940.0 press right
+rel right
+100940.0-101080.0 press up
+rel up
+101080.0-101220.0 press right
+rel right
+101220.0-101360.0 press up
+rel up
+101360.0-101500.0 press right
+rel right
+101500.0-101640.0 press up
+rel up
+101640.0-101780.0 press right
+rel right
+101780.0-101920.0 press up
+rel up
+101920.0-102060.0 press right
+rel right
+102060.0-102200.0 press up
+rel up
+102200.0-102340.0 press right
+rel right
+102340.0-102480.0 press up
+rel up
+102480.0-102620.0 press right
+rel right
+102620.0-102760.0 press up
+rel up
+102760.0-102900.0 press right
+rel right
+102900.0-103040.0 press up
+rel up
+103040.0-103180.0 press right
+rel right
+103180.0-103320.0 press up
+rel up
+103320.0-103460.0 press right
+rel right
+103460.0-103600.0 press up
+rel up
+103600.0-103740.0 press right
+rel right
+103740.0-103880.0 press up
+rel up
+103880.0-104020.0 press right
+rel right
+104020.0-104160.0 press up
+rel up
+104160.0-104300.0 press right
+rel right
+104300.0-104440.0 press up
+rel up
+104440.0-104580.0 press right
+rel right
+104580.0-104720.0 press up
+rel up
+104720.0-104860.0 press right
+rel right
+104860.0-105000.0 press right
+rel right
+105000.0-105140.0 press right
+rel right
+105140.0-105280.0 press left
+rel left
+105280.0-105420.0 press up
+rel up
+105420.0-105560.0 press left
+rel left
+105560.0-105700.0 press up
+rel up
+105700.0-105840.0 press left
+rel left
+105840.0-105980.0 press down
+rel down
+105980.0-106120.0 press up
+rel up
+106120.0-106260.0 press up
+rel up
+106260.0-106400.0 press up
+rel up
+106400.0-106540.0 press right
+rel right
+106540.0-106680.0 press left
+rel left
+106680.0-106820.0 press down
+rel down
+106820.0-106960.0 press right
+rel right
+106960.0-107100.0 press right
+rel right
+107100.0-107240.0 press up
+rel up
+107240.0-107380.0 press right
+rel right
+107380.0-107520.0 press right
+rel right
+107520.0-107660.0 press right
+rel right
+107660.0-107800.0 press right
+rel right
+107800.0-107940.0 press right
+rel right
+107940.0-108080.0 press right
+rel right
+108080.0-108220.0 press left
+rel left
+108220.0-108360.0 press down
+rel down
+108360.0-108500.0 press left
+rel left
+108500.0-108640.0 press down
+rel down
+108640.0-108780.0 press right
+rel right
+108780.0-108920.0 press up
+rel up
+108920.0-109060.0 press up
+rel up
+109060.0-109200.0 press up
+rel up
+109200.0-109340.0 press up
+rel up
+109340.0-109480.0 press up
+rel up
+109480.0-109620.0 press up
+rel up
+109620.0-109760.0 press up
+rel up
+109760.0-109900.0 press up
+rel up
+109900.0-110040.0 press up
+rel up
+110040.0-110180.0 press up
+rel up
+110180.0-110320.0 press up
+rel up
+110320.0-110460.0 press up
+rel up
+110460.0-110600.0 press up
+rel up
+110600.0-110740.0 press up
+rel up
+110740.0-110880.0 press up
+rel up
+110880.0-111020.0 press up
+rel up
+111020.0-111160.0 press up
+rel up
+111160.0-111300.0 press up
+rel up
+111300.0-111440.0 press up
+rel up
+111440.0-111580.0 press up
+rel up
+111580.0-111720.0 press up
+rel up
+111720.0-111860.0 press up
+rel up
+111860.0-112000.0 press up
+rel up
+112000.0-112140.0 press up
+rel up
+112140.0-112280.0 press up
+rel up
+112280.0-112420.0 press up
+rel up
+112420.0-112560.0 press up
+rel up
+112560.0-112700.0 press up
+rel up
+112700.0-112840.0 press up
+rel up
+112840.0-112980.0 press up
+rel up
+112980.0-113120.0 press up
+rel up
+113120.0-113260.0 press up
+rel up
+113260.0-113400.0 press up
+rel up
+113400.0-113540.0 press up
+rel up
+113540.0-113680.0 press up
+rel up
+113680.0-113820.0 press up
+rel up
+113820.0-113960.0 press left
+rel left
+113960.0-114100.0 press up
+rel up
+114100.0-114240.0 press left
+rel left
+114240.0-114380.0 press up
+rel up
+114380.0-114520.0 press left
+rel left
+114520.0-114660.0 press up
+rel up
+114660.0-114800.0 press left
+rel left
+114800.0-114940.0 press up
+rel up
+114940.0-115080.0 press up
+rel up
+115080.0-115220.0 press up
+rel up
+115220.0-115360.0 press up
+rel up
+115360.0-115500.0 press up
+rel up
+115500.0-115640.0 press up
+rel up
+115640.0-115780.0 press up
+rel up
+115780.0-115920.0 press up
+rel up
+115920.0-116060.0 press up
+rel up
+116060.0-116200.0 press right
+rel right
+116200.0-116340.0 press up
+rel up
+116340.0-116480.0 press right
+rel right
+116480.0-116620.0 press up
+rel up
+116620.0-116760.0 press right
+rel right
+116760.0-116900.0 press up
+rel up
+116900.0-117040.0 press right
+rel right
+117040.0-117180.0 press up
+rel up
+117180.0-117320.0 press right
+rel right
+117320.0-117460.0 press up
+rel up
+117460.0-117600.0 press right
+rel right
+117600.0-117740.0 press up
+rel up
+117740.0-117880.0 press right
+rel right
+117880.0-118020.0 press left
+rel left
+118020.0-118160.0 press up
+rel up
+118160.0-118300.0 press left
+rel left
+118300.0-118440.0 press up
+rel up
+118440.0-118580.0 press left
+rel left
+118580.0-118720.0 press up
+rel up
+118720.0-118860.0 press left
+rel left
+118860.0-119000.0 press up
+rel up
+119000.0-119140.0 press left
+rel left
+119140.0-119280.0 press up
+rel up
+119280.0-119420.0 press left
+rel left
+119420.0-119560.0 press up
+rel up
+119560.0-119700.0 press left
+rel left
+119700.0-119840.0 press up
+rel up
+119840.0-119980.0 press right
+rel right
+119980.0-120120.0 press up
+rel up
+120120.0-120260.0 press right
+rel right
+120260.0-120400.0 press up
+rel up
+120400.0-120540.0 press right
+rel right
+120540.0-120680.0 press up
+rel up
+120680.0-120820.0 press right
+rel right
+120820.0-120960.0 press up
+rel up
+120960.0-121100.0 press right
+rel right
+121100.0-121240.0 press up
+rel up
+121240.0-121380.0 press right
+rel right
+121380.0-121520.0 press up
+rel up
+121520.0-121660.0 press left
+rel left
+121660.0-121800.0 press up
+rel up
+121800.0-121940.0 press left
+rel left
+121940.0-122080.0 press up
+rel up
+122080.0-122220.0 press left
+rel left
+122220.0-122360.0 press up
+rel up
+122360.0-122500.0 press left
+rel left
+122500.0-122640.0 press up
+rel up
+122640.0-122780.0 press left
+rel left
+122780.0-122920.0 press up
+rel up
+122920.0-123060.0 press left
+rel left
+123060.0-123200.0 press up
+rel up
+123200.0-123340.0 press left
+rel left
+123340.0-123480.0 press up
+rel up
+123480.0-123620.0 press right
+rel right
+123620.0-123760.0 press up
+rel up
+123760.0-123900.0 press right
+rel right
+123900.0-124040.0 press up
+rel up
+124040.0-124180.0 press right
+rel right
+124180.0-124320.0 press up
+rel up
+124320.0-124460.0 press right
+rel right
+124460.0-124600.0 press up
+rel up
+124600.0-124740.0 press right
+rel right
+124740.0-124880.0 press up
+rel up
+124880.0-125020.0 press right
+rel right
+125020.0-125160.0 press up
+rel up
+125160.0-125300.0 press right
+rel right
+125300.0-125440.0 press up
+rel up
+125440.0-125580.0 press left
+rel left
+125580.0-125720.0 press up
+rel up
+125720.0-125860.0 press left
+rel left
+125860.0-126000.0 press up
+rel up
+126000.0-126140.0 press left
+rel left
+126140.0-126280.0 press up
+rel up
+126280.0-126420.0 press left
+rel left
+126420.0-126560.0 press up
+rel up
+126560.0-126700.0 press left
+rel left
+126700.0-126840.0 press up
+rel up
+126840.0-126980.0 press left
+rel left
+126980.0-127120.0 press up
+rel up
+127120.0-127260.0 press right
+rel right
+127260.0-127400.0 press up
+rel up
+127400.0-127540.0 press right
+rel right
+127540.0-127680.0 press up
+rel up
+127680.0-127820.0 press right
+rel right
+127820.0-127960.0 press up
+rel up
+127960.0-128100.0 press right
+rel right
+128100.0-128240.0 press up
+rel up
+128240.0-128380.0 press right
+rel right
+128380.0-128520.0 press up
+rel up
+128520.0-128660.0 press right
+rel right
+128660.0-128800.0 press up
+rel up
+128800.0-128940.0 press right
+rel right
+128940.0-129080.0 press up
+rel up
+129080.0-129220.0 press left
+rel left
+129220.0-129360.0 press up
+rel up
+129360.0-129500.0 press left
+rel left
+129500.0-129640.0 press up
+rel up
+129640.0-129780.0 press left
+rel left
+129780.0-129920.0 press up
+rel up
+129920.0-130060.0 press left
+rel left
+130060.0-130200.0 press up
+rel up
+130200.0-130340.0 press left
+rel left
+130340.0-130480.0 press up
+rel up
+130480.0-130620.0 press left
+rel left
+130620.0-130760.0 press up
+rel up
+130760.0-130900.0 press left
+rel left
+130900.0-131040.0 press up
+rel up
+131040.0-131180.0 press left
+rel left
+131180.0-131320.0 press up
+rel up
+131320.0-131460.0 press right
+rel right
+131460.0-131600.0 press up
+rel up
+131600.0-131740.0 press right
+rel right
+131740.0-131880.0 press up
+rel up
+131880.0-132020.0 press right
+rel right
+132020.0-132160.0 press up
+rel up
+132160.0-132300.0 press right
+rel right
+132300.0-132440.0 press up
+rel up
+132440.0-132580.0 press right
+rel right
+132580.0-132720.0 press up
+rel up
+132720.0-132860.0 press right
+rel right
+132860.0-133000.0 press up
+rel up
+133000.0-133140.0 press right
+rel right
+133140.0-133280.0 press up
+rel up
+133280.0-133420.0 press right
+rel right
+133420.0-133560.0 press up
+rel up
+133560.0-133700.0 press left
+rel left
+133700.0-133840.0 press up
+rel up
+133840.0-133980.0 press left
+rel left
+133980.0-134120.0 press up
+rel up
+134120.0-134260.0 press left
+rel left
+134260.0-134400.0 press up
+rel up
+134400.0-134540.0 press left
+rel left
+134540.0-134680.0 press up
+rel up
+134680.0-134820.0 press left
+rel left
+134820.0-134960.0 press up
+rel up
+134960.0-135100.0 press left
+rel left
+135100.0-135240.0 press up
+rel up
+135240.0-135380.0 press left
+rel left
+135380.0-135520.0 press up
+rel up
+135520.0-135660.0 press left
+rel left
+135660.0-135800.0 press up
+rel up
+135800.0-135940.0 press left
+rel left
+135940.0-136080.0 press up
+rel up
+136080.0-136220.0 press right
+rel right
+136220.0-136360.0 press up
+rel up
+136360.0-136500.0 press right
+rel right
+136500.0-136640.0 press up
+rel up
+136640.0-136780.0 press right
+rel right
+136780.0-136920.0 press up
+rel up
+136920.0-137060.0 press right
+rel right
+137060.0-137200.0 press up
+rel up
+137200.0-137340.0 press right
+rel right
+137340.0-137480.0 press up
+rel up
+137480.0-137620.0 press right
+rel right
+137620.0-137760.0 press up
+rel up
+137760.0-137900.0 press right
+rel right
+137900.0-138040.0 press up
+rel up
+138040.0-138180.0 press right
+rel right
+138180.0-138320.0 press up
+rel up
+138320.0-138460.0 press left
+rel left
+138460.0-138600.0 press up
+rel up
+138600.0-138740.0 press left
+rel left
+138740.0-138880.0 press up
+rel up
+138880.0-139020.0 press left
+rel left
+139020.0-139160.0 press up
+rel up
+139160.0-139300.0 press left
+rel left
+139300.0-139440.0 press up
+rel up
+139440.0-139580.0 press left
+rel left
+139580.0-139720.0 press up
+rel up
+139720.0-139860.0 press left
+rel left
+139860.0-140000.0 press up
+rel up
+140000.0-140140.0 press left
+rel left
+140140.0-140280.0 press up
+rel up
+140280.0-140420.0 press left
+rel left
+140420.0-140560.0 press up
+rel up
+140560.0-140700.0 press left
+rel left
+140700.0-140840.0 press up
+rel up
+140840.0-140980.0 press left
+rel left
+140980.0-141120.0 press up
+rel up
+141120.0-141260.0 press left
+rel left
+141260.0-141400.0 press up
+rel up
+141400.0-141540.0 press left
+rel left
+141540.0-141680.0 press up
+rel up
+141680.0-141820.0 press left
+rel left
+141820.0-141960.0 press up
+rel up
+141960.0-142100.0 press left
+rel left
+142100.0-142240.0 press up
+rel up
+142240.0-142380.0 press left
+rel left
+142380.0-142520.0 press up
+rel up
+142520.0-142660.0 press left
+rel left
+142660.0-142800.0 press up
+rel up
+142800.0-142940.0 press left
+rel left
+142940.0-143080.0 press up
+rel up
+143080.0-143220.0 press left
+rel left
+143220.0-143360.0 press up
+rel up
+143360.0-143500.0 press left
+rel left
+143500.0-143640.0 press up
+rel up
+143640.0-143780.0 press left
+rel left
+143780.0-143920.0 press up
+rel up
+143920.0-144060.0 press left
+rel left
+144060.0-144200.0 press up
+rel up
+144200.0-144340.0 press left
+rel left
+144340.0-144480.0 press up
+rel up
+144480.0-144620.0 press left
+rel left
+144620.0-144760.0 press up
+rel up
+144760.0-144900.0 press left
+rel left
+144900.0-145040.0 press up
+rel up
+145040.0-145180.0 press left
+rel left
+145180.0-145320.0 press up
+rel up
+145320.0-145460.0 press left
+rel left
+145460.0-145600.0 press up
+rel up
+145600.0-145740.0 press left
+rel left
+145740.0-145880.0 press down
+rel down
+145880.0-146020.0 press left
+rel left
+146020.0-146160.0 press down
+rel down
+146160.0-146300.0 press left
+rel left
+146300.0-146440.0 press down
+rel down
+146440.0-146580.0 press left
+rel left
+146580.0-146720.0 press down
+rel down
+146720.0-146860.0 press left
+rel left
+146860.0-147000.0 press down
+rel down
+147000.0-147140.0 press left
+rel left
+147140.0-147280.0 press down
+rel down
+147280.0-147420.0 press left
+rel left
+147420.0-147560.0 press down
+rel down
+147560.0-147700.0 press left
+rel left
+147700.0-147840.0 press down
+rel down
+147840.0-147980.0 press left
+rel left
+147980.0-148120.0 press down
+rel down
+148120.0-148260.0 press left
+rel left
+148260.0-148400.0 press down
+rel down
+148400.0-148540.0 press left
+rel left
+148540.0-148680.0 press down
+rel down
+148680.0-148820.0 press left
+rel left
+148820.0-148960.0 press up
+rel up
+148960.0-149100.0 press left
+rel left
+149100.0-149240.0 press up
+rel up
+149240.0-149380.0 press left
+rel left
+149380.0-149520.0 press up
+rel up
+149520.0-149660.0 press left
+rel left
+149660.0-149800.0 press up
+rel up
+149800.0-149940.0 press left
+rel left
+149940.0-150080.0 press up
+rel up
+150080.0-150220.0 press left
+rel left
+150220.0-150360.0 press up
+rel up
+150360.0-150500.0 press left
+rel left
+150500.0-150640.0 press up
+rel up
+150640.0-150780.0 press left
+rel left
+150780.0-150920.0 press up
+rel up
+150920.0-151060.0 press left
+rel left
+151060.0-151200.0 press up
+rel up
+151200.0-151340.0 press left
+rel left
+151340.0-151480.0 press up
+rel up
+151480.0-151620.0 press left
+rel left
+151620.0-151760.0 press up
+rel up
+151760.0-151900.0 press left
+rel left
+151900.0-152040.0 press up
+rel up
+152040.0-152180.0 press left
+rel left
+152180.0-152320.0 press up
+rel up
+152320.0-152460.0 press left
+rel left
+152460.0-152600.0 press up
+rel up
+152600.0-152740.0 press left
+rel left
+152740.0-152880.0 press up
+rel up
+152880.0-153020.0 press left
+rel left
+153020.0-153160.0 press up
+rel up
+153160.0-153300.0 press left
+rel left
+153300.0-153440.0 press up
+rel up
+153440.0-153580.0 press left
+rel left
+153580.0-153720.0 press up
+rel up
+153720.0-153860.0 press left
+rel left
+153860.0-154000.0 press up
+rel up
+154000.0-154140.0 press left
+rel left
+154140.0-154280.0 press up
+rel up
+154280.0-154420.0 press left
+rel left
+154420.0-154560.0 press up
+rel up
+154560.0-154700.0 press left
+rel left
+154700.0-154840.0 press up
+rel up
+154840.0-154980.0 press left
+rel left
+154980.0-155120.0 press up
+rel up
+155120.0-155260.0 press left
+rel left
+155260.0-155400.0 press up
+rel up
+155400.0-155540.0 press left
+rel left
+155540.0-155680.0 press up
+rel up
+155680.0-155820.0 press left
+rel left
+155820.0-155960.0 press up
+rel up
+155960.0-156100.0 press left
+rel left
+156100.0-156240.0 press up
+rel up
+156240.0-156380.0 press left
+rel left
+156380.0-156520.0 press up
+rel up
+156520.0-156660.0 press left
+rel left
+156660.0-156800.0 press up
+rel up
+156800.0-156940.0 press left
+rel left
+156940.0-157080.0 press up
+rel up
+157080.0-157220.0 press left
+rel left
+157220.0-157360.0 press up
+rel up
+157360.0-157500.0 press left
+rel left
+157500.0-157640.0 press up
+rel up
+157640.0-157780.0 press right
+rel right
+157780.0-157920.0 press right
+rel right
+157920.0-158060.0 press up
+rel up
+158060.0-158200.0 press right
+rel right
+158200.0-158340.0 press up
+rel up
+158340.0-158480.0 press right
+rel right
+158480.0-158620.0 press up
+rel up
+158620.0-158760.0 press right
+rel right
+158760.0-158900.0 press up
+rel up
+158900.0-159040.0 press right
+rel right
+159040.0-159180.0 press left
+rel left
+159180.0-159320.0 press down
+rel down
+159320.0-159460.0 press left
+rel left
+159460.0-159600.0 press down
+rel down
+159600.0-159740.0 press left
+rel left
+159740.0-159880.0 press down
+rel down
+159880.0-160020.0 press left
+rel left
+160020.0-160160.0 press down
+rel down
+160160.0-160300.0 press left
+rel left
+160300.0-160440.0 press down
+rel down
+160440.0-160580.0 press left
+rel left
+160580.0-160720.0 press down
+rel down
+160720.0-160860.0 press left
+rel left
+160860.0-161000.0 press down
+rel down
+161000.0-161140.0 press left
+rel left
+161140.0-161280.0 press down
+rel down
+161280.0-161420.0 press left
+rel left
+161420.0-161560.0 press down
+rel down
+161560.0-161700.0 press left
+rel left
+161700.0-161840.0 press down
+rel down
+161840.0-161980.0 press left
+rel left
+161980.0-162120.0 press down
+rel down
+162120.0-162260.0 press left
+rel left
+162260.0-162400.0 press up
+rel up
+162400.0-162540.0 press left
+rel left
+162540.0-162680.0 press up
+rel up
+162680.0-162820.0 press left
+rel left
+162820.0-162960.0 press up
+rel up
+162960.0-163100.0 press left
+rel left
+163100.0-163240.0 press up
+rel up
+163240.0-163380.0 press left
+rel left
+163380.0-163520.0 press up
+rel up
+163520.0-163660.0 press left
+rel left
+163660.0-163800.0 press up
+rel up
+163800.0-163940.0 press left
+rel left
+163940.0-164080.0 press up
+rel up
+164080.0-164220.0 press left
+rel left
+164220.0-164360.0 press up
+rel up
+164360.0-164500.0 press left
+rel left
+164500.0-164640.0 press up
+rel up
+164640.0-164780.0 press left
+rel left
+164780.0-164920.0 press up
+rel up
+164920.0-165060.0 press up
+rel up
+165060.0-165200.0 press up
+rel up
+165200.0-165340.0 press up
+rel up
+165340.0-165480.0 press up
+rel up
+165480.0-165620.0 press up
+rel up
+165620.0-165760.0 press up
+rel up
+165760.0-165900.0 press up
+rel up
+165900.0-166040.0 press up
+rel up
+166040.0-166180.0 press up
+rel up
+166180.0-166320.0 press up
+rel up
+166320.0-166460.0 press up
+rel up
+166460.0-166600.0 press up
+rel up
+
