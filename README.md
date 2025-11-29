@@ -65,7 +65,7 @@ vkcube
 You can view the output through a VNC session and confirm GPU activity on the host system (e.g. using the `nvidia-smi` command on NVIDIA hardware). To run the game, simply launch it through Wine as 
 you normally would, no additional commands are required.
 
-Vulkan works correctly for the game itself however the TMLoader GUI does not currently render properly when using Vulkan (see this [issue]()). The game can still be started through TMLoader via console.
+Vulkan works correctly for the game itself however the TMLoader GUI does not currently render properly when using Vulkan (see this [issue](https://github.com/SgSiegens/TMNF-Docker/issues/1)). The game can still be started through TMLoader via console.
 If you prefer not to use Vulkan, you can switch to OpenGL by using VirtualGL instead.
 
 #### VirtualGL
