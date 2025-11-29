@@ -293,6 +293,7 @@ COPY --chown=${USERNAME}:${USERNAME} TmForever/ /home/${USERNAME}/.wine/drive_c/
 # ----------------------------------------------------
 # --------------   VNC Setup -------------------------
 # ----------------------------------------------------
+# most of this setup is from https://qxf2.com/blog/view-docker-container-display-using-vnc-viewer/
 # Set VNC password 
 ENV PASSWD=mypasswd
 

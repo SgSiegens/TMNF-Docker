@@ -1,6 +1,6 @@
 # TMNF-Docker
 TMNF-Docker is a Linux-based Docker environment for running [TrackMania Nations Forever](https://www.trackmaniaforever.com/) with [TMLoader](https://tomashu.dev/software/tmloader/) 
-using headless GPU rendering. The game runs inside the container through Wine with support for both Vulkan (via DXVK) and OpenGL-based rendering. A VNC server can be enabled to view
+using headless GPU rendering. The game runs inside the container through Wine with support for both Vulkan (via [DXVK](https://github.com/doitsujin/dxvk)) and OpenGL-based(via [VirtualGL](https://virtualgl.org/)) rendering. A VNC server can be enabled to view
 the graphical output of the container. In addition the container includes a default TrackMania profile, allowing the game to be used immediately out of the box without additional 
 configuration.
 
