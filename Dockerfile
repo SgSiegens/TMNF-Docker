@@ -104,6 +104,7 @@ RUN dpkg --add-architecture i386 && \
         xvfb \
         xfburn \
 	### minimal window manager ###
+	xserver-xorg-video-dummy x11-apps \
 	xdotool \
 	fluxbox \
 	wmctrl \
@@ -311,6 +312,9 @@ RUN chmod +x /usr/local/bin/start-vnc.sh
 # Expose VNC port
 EXPOSE 5900
 
+## xorg config 
+
+COPY xorg.conf /etc/X11/xorg.conf
 # ----------------------------------------------------
 # ----------- Final Configuration --------------------
 # ----------------------------------------------------
