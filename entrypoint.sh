@@ -19,6 +19,12 @@ echo "X socket is ready"
 nohup fluxbox >/dev/null 2>&1 < /dev/null &
 echo "Fluxbox started."
 
+# nohup compton --vsync opengl-swc --backend glx >/dev/null 2>&1 < /dev/null &
+# echo "Compton started."
+
+# nohup picom --config /etc/xdg/picom.conf >/dev/null 2>&1 < /dev/null &
+# echo "Picom started."
+
 export VGL_DISPLAY="egl"
 export VGL_REFRESHRATE="$REFRESH"
 

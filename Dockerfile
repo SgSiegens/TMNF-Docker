@@ -108,6 +108,7 @@ RUN dpkg --add-architecture i386 && \
 	xdotool \
 	fluxbox \
 	wmctrl \
+	compton \
 	### These are specific for the wine and TMNF install ###
         cabextract \
         gnupg \
@@ -271,7 +272,7 @@ RUN \
   done \
   && while [ $(stat -c '%Y' $WINEPREFIX/user.reg) = $before ]; do sleep 1; done
 
-# RUN xvfb-run --auto-servernum winetricks dxvk
+RUN xvfb-run --auto-servernum winetricks dxvk
 
 # Clean up unnecessary Windows folders
 RUN rm -rf "${WINEPREFIX}/drive_c/users/${USERNAME}/"*{Downloads,Music,Pictures,Videos,Templates,Public}* 2>/ev/null || true
@@ -313,8 +314,10 @@ RUN chmod +x /usr/local/bin/start-vnc.sh
 EXPOSE 5900
 
 ## xorg config 
-
 COPY xorg.conf /etc/X11/xorg.conf
+
+# picom config 
+COPY picom.conf /etc/xdg/picom.conf
 # ----------------------------------------------------
 # ----------- Final Configuration --------------------
 # ----------------------------------------------------
