@@ -63,11 +63,11 @@ RUN dpkg --add-architecture i386 && \
         git \
         jq \
         make \
-        python \
-        python-numpy \
-        python3 \
-        python3-cups \
-        python3-numpy \
+        # python \
+        # python-numpy \
+        # python3 \
+        # python3-cups \
+        # python3-numpy \
         mlocate \
         nano \
         vim \
