@@ -46,9 +46,9 @@ RUN dpkg --add-architecture i386 && \
         apt-utils \
         build-essential \
         ca-certificates \
-        cups-filters \
-        cups-common \
-        cups-pdf \
+        # cups-filters \
+        # cups-common \
+        # cups-pdf \
         curl \
         file \
         wget \
