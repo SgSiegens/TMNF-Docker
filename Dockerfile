@@ -77,14 +77,14 @@ RUN dpkg --add-architecture i386 && \
         # brltty-x11 \
         desktop-file-utils \
         gucharmap \
-        mpd \
+        # mpd \
         # onboard \
         # orage \
         # parole \
         policykit-desktop-privileges \
         libpulse0 \
-        pavucontrol \
-        ristretto \
+        # pavucontrol \
+        # ristretto \
         supervisor \
         # thunar \
         # thunar-volman \
