@@ -73,23 +73,23 @@ RUN dpkg --add-architecture i386 && \
         vim \
         htop \
         xarchiver \
-        brltty \
-        brltty-x11 \
+        # brltty \
+        # brltty-x11 \
         desktop-file-utils \
         gucharmap \
         mpd \
-        onboard \
-        orage \
-        parole \
+        # onboard \
+        # orage \
+        # parole \
         policykit-desktop-privileges \
         libpulse0 \
         pavucontrol \
         ristretto \
         supervisor \
-        thunar \
-        thunar-volman \
-        thunar-archive-plugin \
-        thunar-media-tags-plugin \
+        # thunar \
+        # thunar-volman \
+        # thunar-archive-plugin \
+        # thunar-media-tags-plugin \
         net-tools \
         libgtk-3-bin \
         vainfo \
@@ -102,7 +102,7 @@ RUN dpkg --add-architecture i386 && \
         numlockx \
         xcursor-themes \
         xvfb \
-        xfburn \
+        # xfburn \
 	### minimal window manager ###
 	xserver-xorg-video-dummy x11-apps \
 	xdotool \
