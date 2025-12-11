@@ -12,16 +12,16 @@ LABEL maintainer "https://github.com/SgSiegens"
 
 ARG NVIDIA_VISIBLE_DEVICES=all
 ARG DEBIAN_FRONTEND=noninteractive
-ENV NVIDIA_DRIVER_CAPABILITIES all
-ENV PULSE_SERVER 127.0.0.1:4713
-ENV TZ UTC
-ENV REFRESH 60
-ENV PASSWD mypasswd
-ENV NOVNC_ENABLE false
-ENV WEBRTC_ENCODER nvh264enc
-ENV WEBRTC_ENABLE_RESIZE false
-ENV ENABLE_AUDIO false
-ENV ENABLE_BASIC_AUTH true
+ENV NVIDIA_DRIVER_CAPABILITIES=all
+ENV PULSE_SERVER=127.0.0.1:4713
+ENV TZ=UTC
+ENV REFRESH=60
+ENV PASSWD=mypasswd
+ENV NOVNC_ENABLE=false
+ENV WEBRTC_ENCODER=nvh264enc
+ENV WEBRTC_ENABLE_RESIZE=false
+ENV ENABLE_AUDIO=false
+ENV ENABLE_BASIC_AUTH=true
 
 # NVIDIA key fix
 RUN apt-get clean && \
@@ -144,8 +144,6 @@ RUN if [ "${UBUNTU_RELEASE}" = "18.04" ]; then apt-get update && apt-get install
     }\n\
 }" > /etc/vulkan/icd.d/nvidia_icd.json
 
-# RUN sudo apt install lib32-nvidia-utils
-
 # Install VirtualGL
 ARG VIRTUALGL_VERSION=3.1
 ARG VIRTUALGL_URL="https://sourceforge.net/projects/virtualgl/files"
@@ -161,19 +159,11 @@ RUN curl -fsSL -O "${VIRTUALGL_URL}/virtualgl_${VIRTUALGL_VERSION}_amd64.deb" &&
     chmod u+s /usr/lib/i386-linux-gnu/libvglfaker.so && \
     chmod u+s /usr/lib/i386-linux-gnu/libdlfaker.so
 
-# Create a dummy Fluxbox config directory and a minimal init file
-RUN mkdir -p /root/.fluxbox && \
-    echo "session.session0: true" > /root/.fluxbox/init && \
-    touch /root/.fluxbox/menu /root/.fluxbox/keys /root/.fluxbox/apps
-
-COPY entrypoint.sh /etc/entrypoint.sh
-RUN chmod 755 /etc/entrypoint.sh
-
-ENV DISPLAY :0
-ENV VGL_REFRESHRATE 60
-ENV VGL_ISACTIVE 1
-ENV VGL_DISPLAY egl
-ENV VGL_WM 1
+ENV DISPLAY=0
+ENV VGL_REFRESHRATE=60
+ENV VGL_ISACTIVE=1
+ENV VGL_DISPLAY=egl
+ENV VGL_WM=1
 
 # ----------------------------------------------------
 # ----------- TrackMania Installation Section --------
@@ -206,7 +196,6 @@ RUN wget -nv -O /usr/bin/winetricks https://raw.githubusercontent.com/Winetricks
 # Switch to a non-root user before installing and running TMNF
 # WineHQ strongly recommends never running Wine as root: https://wiki.winehq.org/FAQ#Should_I_run_Wine_as_root.
 # Without this I couldn’t get TMNF running reliably (not 100% sure it’s the only reason, but it works)
-ARG USERNAME=wineuser
 RUN useradd -m -s /bin/bash ${USERNAME} \
     && mkdir -p /home/${USERNAME}/app \
     && chown ${USERNAME}:${USERNAME} /home/${USERNAME}/app
@@ -230,9 +219,9 @@ USER ${USERNAME}
 WORKDIR /home/${USERNAME}
 
 # Set Wine environment for this user
-ENV WINEARCH=win32
-ENV WINEPREFIX=/home/${USERNAME}/.wine
-ENV WINEDEBUG=-all  
+# ENV WINEARCH=win32
+# ENV WINEPREFIX=/home/${USERNAME}/.wine
+# ENV WINEDEBUG=-all  
 
 # Initialize Wine prefix AS the wineuser 
 RUN xvfb-run --auto-servernum wineboot --init && \
@@ -259,8 +248,7 @@ RUN set -ex && \
 # NOTE:  TMNF needs DirectX9. 
 RUN xvfb-run --auto-servernum winetricks -q d3dx9_43
 
-RUN \
-  wineboot -u && \
+RUN wineboot -u && \
   cp /usr/local/bin/dxvk/x32/*.dll $WINEPREFIX/drive_c/windows/system32 && \
   #do this for every dll in x64 and x32 wine reg add 'HKEY_CURRENT_USER\\Software\\Wine\\DllOverrides' /v path_to_dll /d native /f && \
   before=$(stat -c '%Y' $WINEPREFIX/user.reg) \
@@ -282,22 +270,19 @@ RUN rm -rf "${WINEPREFIX}/drive_c/users/${USERNAME}/"*{Downloads,Music,Pictures,
 # It would be much nicer if this were automated as well, but in my opinion that would make the setup much more cumbersome,
 # because we still have no display and TMLoader uses a GUI for setup. So we would need to simulate clicks again,
 # and the GUI is not that simple.
-COPY --chown=${USERNAME}:${USERNAME} TMLoader/ /home/${USERNAME}/.wine/drive_c/Program_Files_x86/TmNationsForever/
 
 # Create Documents dir and copy into it TMInterface and TmForever dirs
 RUN mkdir -p /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TMInterface \
     && mkdir -p /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TmForever
 
-# Copy files into Wine document folders using 
 COPY --chown=${USERNAME}:${USERNAME} TMInterface/ /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TMInterface/
 COPY --chown=${USERNAME}:${USERNAME} TmForever/ /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TmForever/
+COPY --chown=${USERNAME}:${USERNAME} TMLoader/ /home/${USERNAME}/.wine/drive_c/Program_Files_x86/TmNationsForever/
 
 # ----------------------------------------------------
 # --------------   VNC Setup -------------------------
 # ----------------------------------------------------
 # most of this setup is from https://qxf2.com/blog/view-docker-container-display-using-vnc-viewer/
-# Set VNC password 
-ENV PASSWD=mypasswd
 
 # Switch to wineuser to create the VNC password file
 USER ${USERNAME}
@@ -306,18 +291,6 @@ RUN mkdir -p /home/${USERNAME}/.vnc && \
     echo "$PASSWD" | vncpasswd -f > /home/${USERNAME}/.vnc/passwd && \
     chmod 600 /home/${USERNAME}/.vnc/passwd
 
-USER root
-COPY start-vnc.sh /usr/local/bin/start-vnc.sh
-RUN chmod +x /usr/local/bin/start-vnc.sh
-
-# Expose VNC port
-EXPOSE 5900
-
-## xorg config 
-COPY xorg.conf /etc/X11/xorg.conf
-
-# picom config 
-COPY picom.conf /etc/xdg/picom.conf
 # ----------------------------------------------------
 # ----------- Final Configuration --------------------
 # ----------------------------------------------------
@@ -325,6 +298,22 @@ COPY picom.conf /etc/xdg/picom.conf
 # This ensures the entrypoint.sh script has permission to clean up /tmp locks an start DBus/Xvfb.
 #NOTE: this must be here 
 USER root
+
+# Create a dummy Fluxbox config directory and a minimal init file
+RUN mkdir -p /root/.fluxbox && \
+    echo "session.session0: true" > /root/.fluxbox/init && \
+    touch /root/.fluxbox/menu /root/.fluxbox/keys /root/.fluxbox/apps
+
+COPY start-vnc.sh /usr/local/bin/start-vnc.sh
+COPY entrypoint.sh /etc/entrypoint.sh
+COPY xorg.conf /etc/X11/xorg.conf
+
+RUN chmod 755 /etc/entrypoint.sh && \
+    chmod +x /usr/local/bin/start-vnc.sh
+
+# Expose VNC port
+EXPOSE 5900
+
 WORKDIR /home/${USERNAME}
 ENTRYPOINT ["/etc/entrypoint.sh"]
 CMD ["bash"]
