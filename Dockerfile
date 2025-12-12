@@ -46,9 +46,6 @@ RUN dpkg --add-architecture i386 && \
         apt-utils \
         build-essential \
         ca-certificates \
-        # cups-filters \
-        # cups-common \
-        # cups-pdf \
         curl \
         file \
         wget \
@@ -63,33 +60,16 @@ RUN dpkg --add-architecture i386 && \
         git \
         jq \
         make \
-        # python \
-        # python-numpy \
-        # python3 \
-        # python3-cups \
-        # python3-numpy \
         mlocate \
         nano \
         vim \
         htop \
         xarchiver \
-        # brltty \
-        # brltty-x11 \
         desktop-file-utils \
         gucharmap \
-        # mpd \
-        # onboard \
-        # orage \
-        # parole \
         policykit-desktop-privileges \
         libpulse0 \
-        # pavucontrol \
-        # ristretto \
         supervisor \
-        # thunar \
-        # thunar-volman \
-        # thunar-archive-plugin \
-        # thunar-media-tags-plugin \
         net-tools \
         libgtk-3-bin \
         vainfo \
@@ -102,7 +82,6 @@ RUN dpkg --add-architecture i386 && \
         numlockx \
         xcursor-themes \
         xvfb \
-        # xfburn \
 	### minimal window manager ###
 	xserver-xorg-video-dummy x11-apps \
 	xdotool \
@@ -201,43 +180,48 @@ RUN useradd -m -s /bin/bash ${USERNAME} \
     && chown ${USERNAME}:${USERNAME} /home/${USERNAME}/app
 
 # adopted from https://github.com/raldone01/docker_headless_dxvk/blob/main/im_dxvk_cpu/Dockerfile
+# we dont need the x64 packages, but if you need them just modify hhe last cp command to include the x64 packages
 # Install dxvk for wine
 ARG DXVK_VERSION="2.6.1"
-RUN \
-  mkdir -p /tmp/dxvk && \
-  cd /tmp/dxvk && \
-  curl -L "https://github.com/doitsujin/dxvk/releases/download/v${DXVK_VERSION}/dxvk-${DXVK_VERSION}.tar.gz" \
-    -o dxvk-${DXVK_VERSION}.tar.gz && \
-  tar -xzf dxvk-${DXVK_VERSION}.tar.gz && \
-  cd dxvk-${DXVK_VERSION} && \
-  mkdir -p /usr/local/bin/dxvk && \
-  cp -r x32 x64 /usr/local/bin/dxvk && \
-  rm -rf /tmp/dxvk
+ARG DXVK_STORE_PATH=/usr/local/bin/dxvk
+RUN mkdir -p /tmp/dxvk && \
+    cd /tmp/dxvk && \
+    curl -L "https://github.com/doitsujin/dxvk/releases/download/v${DXVK_VERSION}/dxvk-${DXVK_VERSION}.tar.gz" -o dxvk-${DXVK_VERSION}.tar.gz && \
+    tar -xzf dxvk-${DXVK_VERSION}.tar.gz && \
+    cd dxvk-${DXVK_VERSION} && \
+    mkdir -p ${DXVK_STORE_PATH} && \
+    cp -r x32 ${DXVK_STORE_PATH} && \ 
+    rm -rf /tmp/dxvk
 
 # Switch to the non-root user 
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}
 
-# Set Wine environment for this user
-# ENV WINEARCH=win32
-# ENV WINEPREFIX=/home/${USERNAME}/.wine
-# ENV WINEDEBUG=-all  
-
 # Initialize Wine prefix AS the wineuser 
 RUN xvfb-run --auto-servernum wineboot --init && \
     wineserver --wait   # make sure all services really shut down
 
-# Install some basic winetricks stuff that prevents some weird errors
-RUN xvfb-run --auto-servernum winetricks -q corefonts vcrun6 || true
+# Install some basic winetricks stuff and also d3dx9_43 as well as dxvk for user
+# NOTE: TMNF needs DirectX9 and DXVK depending on if you want to run Vulkan or OpenGL later. 
+RUN xvfb-run --auto-servernum winetricks -q corefonts vcrun6 d3dx9_43 && \
+    cp ${DXVK_STORE_PATH}/x32/*.dll $WINEPREFIX/drive_c/windows/system32 && \
+    #do this for every dll in x64 and x32 wine reg add 'HKEY_CURRENT_USER\\Software\\Wine\\DllOverrides' /v path_to_dll /d native /f && \
+    before=$(stat -c '%Y' $WINEPREFIX/user.reg) \
+    dlls_paths=$(find /usr/local/bin/dxvk -name '*.dll') && \
+    for dll in $dlls_paths; do \
+    wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v "$(basename "${dll%.*}")" /d native /f; \
+    # get the reg keys
+    # wine reg query "HKEY_CURRENT_USER\Software\Wine\DllOverrides" | grep -i $(basename "${dll%.*}"); \
+    done \
+    && while [ $(stat -c '%Y' $WINEPREFIX/user.reg) = $before ]; do sleep 1; done \
+    && winetricks dxvk
 
 # Download and run the TMNF installer using xvfb because it has a GUI wizard.
 # To avoid simulating mouse clicks (accepting terms, clicking Next, etc.),
 # we run the installer with the /verysilent flag so all prompts are automatically skipped.
 RUN set -ex && \
     cd /home/${USERNAME}/app && \
-    echo "Downloading installer..." && \
     wget -O "$TM_SETUP_FILE" "$TM_INSTALLER_URL" && \
-    echo "Running TrackMania installer (silent)..." && \
     xvfb-run --auto-servernum --server-args="-screen 0 1024x768x24" \
         wine "$TM_SETUP_FILE" \
         /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /SP- \
@@ -245,33 +229,25 @@ RUN set -ex && \
     echo "Installation complete" && \
     rm -f "$TM_SETUP_FILE"
 
-# NOTE:  TMNF needs DirectX9. 
-RUN xvfb-run --auto-servernum winetricks -q d3dx9_43
-
-RUN wineboot -u && \
-  cp /usr/local/bin/dxvk/x32/*.dll $WINEPREFIX/drive_c/windows/system32 && \
-  #do this for every dll in x64 and x32 wine reg add 'HKEY_CURRENT_USER\\Software\\Wine\\DllOverrides' /v path_to_dll /d native /f && \
-  before=$(stat -c '%Y' $WINEPREFIX/user.reg) \
-  dlls_paths=$(find /usr/local/bin/dxvk -name '*.dll') && \
-  for dll in $dlls_paths; do \
-  wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v "$(basename "${dll%.*}")" /d native /f; \
-  # get the reg keys
-  # wine reg query "HKEY_CURRENT_USER\Software\Wine\DllOverrides" | grep -i $(basename "${dll%.*}"); \
-  done \
-  && while [ $(stat -c '%Y' $WINEPREFIX/user.reg) = $before ]; do sleep 1; done
-
-RUN xvfb-run --auto-servernum winetricks dxvk
+# RUN wineboot -u && \
+#   cp ${DXVK_STORE_PATH}/x32/*.dll $WINEPREFIX/drive_c/windows/system32 && \
+#   #do this for every dll in x64 and x32 wine reg add 'HKEY_CURRENT_USER\\Software\\Wine\\DllOverrides' /v path_to_dll /d native /f && \
+#   before=$(stat -c '%Y' $WINEPREFIX/user.reg) \
+#   dlls_paths=$(find /usr/local/bin/dxvk -name '*.dll') && \
+#   for dll in $dlls_paths; do \
+#   wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v "$(basename "${dll%.*}")" /d native /f; \
+#   # get the reg keys
+#   # wine reg query "HKEY_CURRENT_USER\Software\Wine\DllOverrides" | grep -i $(basename "${dll%.*}"); \
+#   done \
+#   && while [ $(stat -c '%Y' $WINEPREFIX/user.reg) = $before ]; do sleep 1; done
+#
+# RUN xvfb-run --auto-servernum winetricks dxvk
 
 # Clean up unnecessary Windows folders
 RUN rm -rf "${WINEPREFIX}/drive_c/users/${USERNAME}/"*{Downloads,Music,Pictures,Videos,Templates,Public}* 2>/ev/null || true
 
-# Copy CONTENTS of TMLoader directly into the game root folder
-# NOTE: This is very hacky and, for some, also ugly, since we depend on having these setup files created beforehand.
-# It would be much nicer if this were automated as well, but in my opinion that would make the setup much more cumbersome,
-# because we still have no display and TMLoader uses a GUI for setup. So we would need to simulate clicks again,
-# and the GUI is not that simple.
-
-# Create Documents dir and copy into it TMInterface and TmForever dirs
+# NOTE: Copying pre-configured TMLoader/TMInterface files because automating their complex GUI 
+# setup in this headless environment is overly cumbersome.
 RUN mkdir -p /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TMInterface \
     && mkdir -p /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TmForever
 
