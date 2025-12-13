@@ -229,20 +229,6 @@ RUN set -ex && \
     echo "Installation complete" && \
     rm -f "$TM_SETUP_FILE"
 
-# RUN wineboot -u && \
-#   cp ${DXVK_STORE_PATH}/x32/*.dll $WINEPREFIX/drive_c/windows/system32 && \
-#   #do this for every dll in x64 and x32 wine reg add 'HKEY_CURRENT_USER\\Software\\Wine\\DllOverrides' /v path_to_dll /d native /f && \
-#   before=$(stat -c '%Y' $WINEPREFIX/user.reg) \
-#   dlls_paths=$(find /usr/local/bin/dxvk -name '*.dll') && \
-#   for dll in $dlls_paths; do \
-#   wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v "$(basename "${dll%.*}")" /d native /f; \
-#   # get the reg keys
-#   # wine reg query "HKEY_CURRENT_USER\Software\Wine\DllOverrides" | grep -i $(basename "${dll%.*}"); \
-#   done \
-#   && while [ $(stat -c '%Y' $WINEPREFIX/user.reg) = $before ]; do sleep 1; done
-#
-# RUN xvfb-run --auto-servernum winetricks dxvk
-
 # Clean up unnecessary Windows folders
 RUN rm -rf "${WINEPREFIX}/drive_c/users/${USERNAME}/"*{Downloads,Music,Pictures,Videos,Templates,Public}* 2>/ev/null || true
 
