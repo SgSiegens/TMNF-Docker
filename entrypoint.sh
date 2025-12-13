@@ -2,7 +2,7 @@
 
 rm -rf /tmp/.X*
 export PATH="${PATH}:/opt/VirtualGL/bin"
-export LD_LIBRARY_PATH="/usr/lib/libreoffice/program:${LD_LIBRARY_PATH}"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}"
 
 /etc/init.d/dbus start
 

@@ -8,7 +8,7 @@ ARG UBUNTU_RELEASE=20.04
 ARG CUDA_VERSION=11.4.2
 FROM nvcr.io/nvidia/cudagl:${CUDA_VERSION}-runtime-ubuntu${UBUNTU_RELEASE}
 
-LABEL maintainer "https://github.com/SgSiegens"
+LABEL maintainer="https://github.com/SgSiegens"
 
 ARG NVIDIA_VISIBLE_DEVICES=all
 ARG DEBIAN_FRONTEND=noninteractive
@@ -33,9 +33,9 @@ RUN apt-get clean && \
     apt-get update && apt-get install --no-install-recommends -y locales && \
     rm -rf /var/lib/apt/lists/* && \
     locale-gen en_US.UTF-8
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US:en
+ENV LC_ALL=en_US.UTF-8
 
 # Desktop + tools
 # TODO: figure out which of these packages we actually realy need
@@ -82,13 +82,13 @@ RUN dpkg --add-architecture i386 && \
         numlockx \
         xcursor-themes \
         xvfb \
-	### minimal window manager ###
-	xserver-xorg-video-dummy x11-apps \
-	xdotool \
-	fluxbox \
-	wmctrl \
-	compton \
-	### These are specific for the wine and TMNF install ###
+        ### minimal window manager ###
+        xserver-xorg-video-dummy x11-apps \
+        xdotool \
+        fluxbox \
+        wmctrl \
+        compton \
+        ### These are specific for the wine and TMNF install ###
         cabextract \
         gnupg \
         gosu \
@@ -99,12 +99,12 @@ RUN dpkg --add-architecture i386 && \
         tzdata \
         winbind \
         zenity \
-	wine32 \
-	### For VNC ###
-	x11vnc \
-	tigervnc-standalone-server \
-	tigervnc-common	&&\
-    apt-get install -y libreoffice && \
+	    wine32 \
+	    ### For VNC ###
+	    x11vnc \
+        x11-utils \
+        tigervnc-standalone-server \
+        tigervnc-common	&&\
     curl -fsSL -o /tmp/vdpau-va-driver.deb "https://launchpad.net/~saiarcot895/+archive/ubuntu/chromium-dev/+files/vdpau-va-driver_0.7.4-6ubuntu2~ppa1~18.04.1_amd64.deb" && \
     apt-get install --no-install-recommends -y /tmp/vdpau-va-driver.deb && \
     rm -rf /tmp/* && \
