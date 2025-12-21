@@ -1,0 +1,27 @@
+#!/bin/bash -e
+
+rm -rf /tmp/.X*
+export PATH="${PATH}:/opt/VirtualGL/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}"
+
+# /etc/init.d/dbus start
+
+# just for logging purposes (wineuser should have gotten the permissions from root now)
+mkdir -p "/home/${USER}/logs"
+chmod 700 "/home/${USER}/logs"
+
+export DISPLAY=":0"
+Xorg -noreset -novtswitch -nolisten tcp +extension GLX +extension RANDR +extension RENDER -logfile /home/${USER}/logs/xorg.log -config /etc/X11/xorg.conf "$DISPLAY" &
+
+# Wait for X11 to start
+echo "Waiting for X socket"
+until [ -S "/tmp/.X11-unix/X${DISPLAY/:/}" ]; do sleep 1; done
+echo "X socket is ready"
+
+# start a window manager since the code needs to grep the  window id of tmnf
+nohup fluxbox >/dev/null 2>&1 < /dev/null &
+echo "Fluxbox started."
+
+echo "Session Running."
+
+"$@"

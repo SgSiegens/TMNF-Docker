@@ -82,6 +82,7 @@ RUN dpkg --add-architecture i386 && \
         numlockx \
         xcursor-themes \
         xvfb \
+        strace \
         ### minimal window manager ###
         xserver-xorg-video-dummy x11-apps \
         xdotool \
@@ -110,22 +111,10 @@ RUN dpkg --add-architecture i386 && \
     rm -rf /tmp/* && \
     rm -rf /var/lib/apt/lists/*
 
-# Install Vulkan (for offscreen rendering only)
-RUN if [ "${UBUNTU_RELEASE}" = "18.04" ]; then apt-get update && apt-get install --no-install-recommends -y libvulkan1 vulkan-utils; else apt-get update && apt-get install --no-install-recommends -y libvulkan1 vulkan-tools; fi && \
-    rm -rf /var/lib/apt/lists/* && \
-    VULKAN_API_VERSION=$(dpkg -s libvulkan1 | grep -oP 'Version: [0-9|\.]+' | grep -oP '[0-9]+(\.[0-9]+)(\.[0-9]+)') && \
-    mkdir -p /etc/vulkan/icd.d/ && \
-    echo "{\n\
-    \"file_format_version\" : \"1.0.0\",\n\
-    \"ICD\": {\n\
-        \"library_path\": \"libGLX_nvidia.so.0\",\n\
-        \"api_version\" : \"${VULKAN_API_VERSION}\"\n\
-    }\n\
-}" > /etc/vulkan/icd.d/nvidia_icd.json
-
 # Install VirtualGL
 ARG VIRTUALGL_VERSION=3.1
 ARG VIRTUALGL_URL="https://sourceforge.net/projects/virtualgl/files"
+
 RUN curl -fsSL -O "${VIRTUALGL_URL}/virtualgl_${VIRTUALGL_VERSION}_amd64.deb" && \
     curl -fsSL -O "${VIRTUALGL_URL}/virtualgl32_${VIRTUALGL_VERSION}_amd64.deb" && \
     apt-get update && apt-get install -y --no-install-recommends ./virtualgl_${VIRTUALGL_VERSION}_amd64.deb ./virtualgl32_${VIRTUALGL_VERSION}_amd64.deb && \
@@ -153,7 +142,7 @@ ENV VGL_WM=1
 
 ENV TM_INSTALLER_URL="https://nadeo-download.cdn.ubi.com/trackmaniaforever/tmnationsforever_setup.exe"
 ENV TM_SETUP_FILE="tmnationsforever_setup.exe"
-ARG USERNAME=wineuser
+ENV USERNAME=wineuser
 ENV USER=${USERNAME}
 # Set Wine to 32-bit mode, as TMNF is a 32-bit application
 ENV WINEARCH=win32
@@ -179,19 +168,6 @@ RUN useradd -m -s /bin/bash ${USERNAME} \
     && mkdir -p /home/${USERNAME}/app \
     && chown ${USERNAME}:${USERNAME} /home/${USERNAME}/app
 
-# adopted from https://github.com/raldone01/docker_headless_dxvk/blob/main/im_dxvk_cpu/Dockerfile
-# we dont need the x64 packages, but if you need them just modify hhe last cp command to include the x64 packages
-# Install dxvk for wine
-ARG DXVK_VERSION="2.6.1"
-ARG DXVK_STORE_PATH=/usr/local/bin/dxvk
-RUN mkdir -p /tmp/dxvk && \
-    cd /tmp/dxvk && \
-    curl -L "https://github.com/doitsujin/dxvk/releases/download/v${DXVK_VERSION}/dxvk-${DXVK_VERSION}.tar.gz" -o dxvk-${DXVK_VERSION}.tar.gz && \
-    tar -xzf dxvk-${DXVK_VERSION}.tar.gz && \
-    cd dxvk-${DXVK_VERSION} && \
-    mkdir -p ${DXVK_STORE_PATH} && \
-    cp -r x32 ${DXVK_STORE_PATH} && \ 
-    rm -rf /tmp/dxvk
 
 # Switch to the non-root user 
 USER ${USERNAME}
@@ -201,20 +177,8 @@ WORKDIR /home/${USERNAME}
 RUN xvfb-run --auto-servernum wineboot --init && \
     wineserver --wait   # make sure all services really shut down
 
-# Install some basic winetricks stuff and also d3dx9_43 as well as dxvk for user
-# NOTE: TMNF needs DirectX9 and DXVK depending on if you want to run Vulkan or OpenGL later. 
-RUN xvfb-run --auto-servernum winetricks -q corefonts vcrun6 d3dx9_43 && \
-    cp ${DXVK_STORE_PATH}/x32/*.dll $WINEPREFIX/drive_c/windows/system32 && \
-    #do this for every dll in x64 and x32 wine reg add 'HKEY_CURRENT_USER\\Software\\Wine\\DllOverrides' /v path_to_dll /d native /f && \
-    before=$(stat -c '%Y' $WINEPREFIX/user.reg) \
-    dlls_paths=$(find /usr/local/bin/dxvk -name '*.dll') && \
-    for dll in $dlls_paths; do \
-    wine reg add "HKEY_CURRENT_USER\Software\Wine\DllOverrides" /v "$(basename "${dll%.*}")" /d native /f; \
-    # get the reg keys
-    # wine reg query "HKEY_CURRENT_USER\Software\Wine\DllOverrides" | grep -i $(basename "${dll%.*}"); \
-    done \
-    && while [ $(stat -c '%Y' $WINEPREFIX/user.reg) = $before ]; do sleep 1; done \
-    && winetricks dxvk
+# Install some basic winetricks stuff and also d3dx9_43
+RUN xvfb-run --auto-servernum winetricks -q corefonts vcrun6 d3dx9_43
 
 # Download and run the TMNF installer using xvfb because it has a GUI wizard.
 # To avoid simulating mouse clicks (accepting terms, clicking Next, etc.),
@@ -267,15 +231,16 @@ RUN mkdir -p /root/.fluxbox && \
     touch /root/.fluxbox/menu /root/.fluxbox/keys /root/.fluxbox/apps
 
 COPY start-vnc.sh /usr/local/bin/start-vnc.sh
-COPY entrypoint.sh /etc/entrypoint.sh
-COPY xorg.conf /etc/X11/xorg.conf
+COPY base-entrypoint.sh /etc/base-entrypoint.sh
 
-RUN chmod 755 /etc/entrypoint.sh && \
-    chmod +x /usr/local/bin/start-vnc.sh
+RUN chmod 755 /etc/base-entrypoint.sh && \
+    chmod 755 /usr/local/bin/start-vnc.sh && \
+    chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}
 
 # Expose VNC port
 EXPOSE 5900
 
+USER ${USERNAME}
 WORKDIR /home/${USERNAME}
-ENTRYPOINT ["/etc/entrypoint.sh"]
+ENTRYPOINT ["/etc/base-entrypoint.sh"]
 CMD ["bash"]
