@@ -10,14 +10,16 @@ which provided important foundations for the GPU handling used in this setup.
 ---
 
 ## Table of Contents
-- [Prerequisites](#prerequisites)
-- [Build the Container](#build-the-container)
-- [Running the Container](#running-the-container)
-    - [VNC](#vnc)
-    - [Rendering Options](#rendering-options)
-        - [Vulkan (DXVK)](#vulkan-dxvk)
-        - [VirtualGL](#virtualgl)
-
+- [TMNF-Docker](#tmnf-docker)
+  * [Prerequisites](#prerequisites)
+  * [Build the Container](#build-the-container)
+    + [Build the Base Image](#build-the-base-image)
+    + [Build the Vulkan Image](#build-the-vulkan-image)
+  * [Running the Container](#running-the-container)
+    + [VNC](#vnc)
+    + [Rendering Options](#rendering-options)
+      - [VirtualGL](#virtualgl)
+      - [Vulkan (DXVK)](#vulkan--dxvk-)
   ---
 ## Prerequisites
 If you are on Linux, you should use Docker Engine instead of Docker Desktop, as Docker Desktop does not support GPU-related workloads on Linux. For more information, see this 
@@ -27,25 +29,34 @@ if you have not done so already.
 ---
 
 ## Build the Container
+This repository provides two Dockerfiles: `Dockerfile.base` and `Dockerfile.vulkan`. The Base file acts as the primary image, building the entire environment including the game and 
+all necessary software, utilizing VirtualGL for rendering. The Vulkan Dockerfile builds on top of the base image and serves as an extension that installs Vulkan and DXVK into the 
+environment. It sets DXVK as the default rendering backend when running TMNF through Wine.
+
+### Build the Base Image
 Clone the repository and build the image by running:
 ```bash
 git clone https://github.com/SgSiegens/TMNF-Docker 
 cd TMNF-Docker
-docker build -t <container_name> .
+docker build -t <container_name>:<tag> -f Dockerfile.base .
 ```
 
----
+### Build the Vulkan Image
+If you wish to also build the Vulkan image, you must first build the base image as described above, and then run:
+```bash
+docker build --build-arg BASE_IMAGE=<name_of_the_base_image_built_earlier>:<tag> -t <container_name>:<tag> -f Dockerfile.vulkan .
 
+```
 ## Running the Container
 To start the container, simply run:
 ```bash
-docker run --gpus all -it <container_name>:latest /bin/bash
+docker run --gpus all -it <container_name>:<tag> /bin/bash
 ```
 --- 
 ### VNC
 If you also want to enable VNC access, you need to expose the VNC port:
 ```bash
-docker run -p <port:port> --gpus all -it <container_name>:latest /bin/bash
+docker run -p <port:port> --gpus all -it <container_name>:<tag> /bin/bash
 ```
 By default, the container uses port **5900:5900** for VNC. After the container is running, start the VNC server by executing the `start-vnc.sh` script from outside the container:
 ```bash
@@ -57,19 +68,8 @@ After that, you will be prompted to enter the VNC password configured for the us
 --- 
 ### Rendering Options
 
-#### Vulkan(DXVK)
-The container uses DXVK by default, which translates DirectX calls to Vulkan. To verify that Vulkan rendering is working, run the following command inside the container:
-```bash 
-vkcube
-```
-You can view the output through a VNC session and confirm GPU activity on the host system (e.g. using the `nvidia-smi` command on NVIDIA hardware). To run the game, simply launch it through Wine as 
-you normally would, no additional commands are required.
-
-Vulkan works correctly for the game itself however the TMLoader GUI does not currently render properly when using Vulkan (see this [issue](https://github.com/SgSiegens/TMNF-Docker/issues/1)). The game can still be started through TMLoader via console.
-If you prefer not to use Vulkan, you can switch to OpenGL by using VirtualGL instead.
-
 #### VirtualGL
-You can run the game using OpenGL through VirtualGL. First, check the detected EGL devices inside the container:
+The Base image supports rendering via VirtualGL, allowing the game to run using OpenGL with hardware acceleration. To use this, first check the detected EGL devices inside the container:
 ```bash
 /opt/VirtualGL/bin/eglinfo -e
 ```
@@ -81,14 +81,10 @@ or, if necessary:
 ```bash
 vglrun -d egl1 /opt/VirtualGL/bin/glxspheres64
 ```
-If the renderer shown in the output matches your GPU, then hardware acceleration is working correctly. You can also double-check this by opening a VNC session to view the desktop and confirming GPU usage, 
-as described in the Vulkan section. Applications can be run with GPU-accelerated OpenGL by prefixing the command with `vglrun`, for example:
+If the renderer shown in the output matches your GPU, then hardware acceleration is working correctly. You can also double-check this by opening a VNC session to view the desktop and confirming GPU usage 
+on the host system (e.g. using the `nvidia-smi` command on NVIDIA hardware). Applications can be run with GPU-accelerated OpenGL by prefixing the command with `vglrun`, for example:
 ```bash
 vglrun -d <eglx_or_dri_device_path> <your_command>
-```
-Because Wine uses DXVK by default, DXVK must be disabled to force OpenGL. Set the following environment variable:
-```bash
-export WINEDLLOVERRIDES="d3d9=b;d3d10=b;d3d10_1=b;d3d10core=b;d3d11=b;dxgi=b"
 ```
 A few additional notes apply if you are using `vglrun` in a Python-based workflow, for example when training a TMNF agent using PyTorch. In such cases you may encounter errors such as:
 ```bash
@@ -101,16 +97,31 @@ load the required CUDA libraries by providing an additional `-ld` parameter to V
 ```bash
 vglrun -d <eglx_or_dri_device_path> -ld <cuda_lib_path> <your_command>
 ```
-
 For reference in a Conda environment we have found the required CUDA libraries under: 
-
 ```bash
 /opt/conda/pkgs/pytorch-2.4.0-py3.11_cuda12.4_cudnn9.1.0_0/lib/python3.11/site-packages/torch/lib
 ```
-
 If you are unsure where the CUDA libraries are located, you can search for them with:
 
 ```bash
 find / -name "libcudnn_graph*.so*" 2>/dev/null
 ```
+
+#### Vulkan (DXVK)
+The Vulkan container utilizes DXVK by default, which translates DirectX calls into the Vulkan API for enhanced performance. You can verify that the Vulkan driver is correctly configured and detect your hardware by running:
+```bash
+vulkaninfo --summary
+```
+To test actual 3D rendering, run the following command inside the container:
+```bash
+vkcube
+```
+You can view the graphical output through a VNC session and confirm active GPU utilization on the host system using the `nvidia-smi` command. To run the game, simply launch it through Wine as you normally would. 
+No additional prefixes are required for DXVK to function.
+In the Vulkan container, you have the option to fall back on OpenGL to run the game. However, since this container enables DXVK by default, you must explicitly disable it to force OpenGL rendering. This is done 
+by setting the following environment variable:
+```bash
+export WINEDLLOVERRIDES="d3d9=b;d3d10=b;d3d10_1=b;d3d10core=b;d3d11=b;dxgi=b"
+```
+Once DXVK is disabled, you should prefix your game command with `vglrun` as described in the OpenGL section.
 
