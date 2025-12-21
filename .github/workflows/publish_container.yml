@@ -1,4 +1,3 @@
-
 name: Publish Docker image
 
 on:
@@ -26,24 +25,42 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract metadata (tags, labels)
-        id: meta
+      # 1. Build and Push BASE Image
+      - name: Build and push Base image
+        id: push_base
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile.base
+          push: true
+          # We tag the base image so the next step can find it
+          tags: ghcr.io/sgsiegens/tmnf-base:latest
+
+      # 2. Extract metadata for the VULKAN image
+      - name: Extract metadata (tags, labels) for Vulkan
+        id: meta_vulkan
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/sgsiegens/tmnf-docker
 
-      - name: Build and push Docker image
-        id: push
+      # 3. Build and Push VULKAN Image (using the Base image)
+      - name: Build and push Vulkan Docker image
+        id: push_vulkan
         uses: docker/build-push-action@v6
         with:
           context: .
+          file: ./Dockerfile.vulkan
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          # Passing the newly built base image as an argument
+          build-args: |
+            BASE_IMAGE=ghcr.io/sgsiegens/tmnf-base:latest
+          tags: ${{ steps.meta_vulkan.outputs.tags }}
+          labels: ${{ steps.meta_vulkan.outputs.labels }}
 
+      # 4. Generate attestation for the final image
       - name: Generate artifact attestation
         uses: actions/attest-build-provenance@v3
         with:
           subject-name: ghcr.io/sgsiegens/tmnf-docker
-          subject-digest: ${{ steps.push.outputs.digest }}
+          subject-digest: ${{ steps.push_vulkan.outputs.digest }}
           push-to-registry: true
