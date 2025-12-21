@@ -35,6 +35,13 @@ jobs:
           push: true
           tags: ghcr.io/sgsiegens/tmnf-docker-base:latest
 
+      - name: Attest Base image
+        uses: actions/attest-build-provenance@v3
+        with:
+          subject-name: ghcr.io/sgsiegens/tmnf-docker-base
+          subject-digest: ${{ steps.push_base.outputs.digest }}
+          push-to-registry: true
+
       # Now the VULKAN image
       - name: Extract metadata (tags, labels) for Vulkan
         id: meta_vulkan
