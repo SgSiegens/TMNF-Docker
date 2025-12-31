@@ -201,9 +201,9 @@ RUN rm -rf "${WINEPREFIX}/drive_c/users/${USERNAME}/"*{Downloads,Music,Pictures,
 RUN mkdir -p /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TMInterface \
     && mkdir -p /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TmForever
 
-COPY --chown=${USERNAME}:${USERNAME} TMInterface/ /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TMInterface/
-COPY --chown=${USERNAME}:${USERNAME} TmForever/ /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TmForever/
-COPY --chown=${USERNAME}:${USERNAME} TMLoader/ /home/${USERNAME}/.wine/drive_c/Program_Files_x86/TmNationsForever/
+COPY --chown=${USERNAME}:${USERNAME} game-data/TMInterface/ /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TMInterface/
+COPY --chown=${USERNAME}:${USERNAME} game-data/TmForever/ /home/${USERNAME}/.wine/drive_c/users/${USERNAME}/Documents/TmForever/
+COPY --chown=${USERNAME}:${USERNAME} game-data/TMLoader/ /home/${USERNAME}/.wine/drive_c/Program_Files_x86/TmNationsForever/
 
 # ----------------------------------------------------
 # --------------   VNC Setup -------------------------
@@ -230,8 +230,8 @@ RUN mkdir -p /root/.fluxbox && \
     echo "session.session0: true" > /root/.fluxbox/init && \
     touch /root/.fluxbox/menu /root/.fluxbox/keys /root/.fluxbox/apps
 
-COPY start-vnc.sh /usr/local/bin/start-vnc.sh
-COPY base-entrypoint.sh /etc/base-entrypoint.sh
+COPY scripts/start-vnc.sh /usr/local/bin/start-vnc.sh
+COPY scripts/base-entrypoint.sh /etc/base-entrypoint.sh
 
 RUN chmod 755 /etc/base-entrypoint.sh && \
     chmod 755 /usr/local/bin/start-vnc.sh && \

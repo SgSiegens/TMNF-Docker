@@ -54,8 +54,8 @@ RUN rm -rf "${WINEPREFIX}/drive_c/users/${USERNAME}/"*{Downloads,Music,Pictures,
 USER root
 
 # For the vulkan approach xvfb does not realy work see this issue: https://github.com/SgSiegens/TMNF-Docker/issues/1
-COPY xorg.conf /etc/X11/xorg.conf
-COPY vulkan-entrypoint.sh /etc/vulkan-entrypoint.sh
+COPY configs/xorg.conf /etc/X11/xorg.conf
+COPY scripts/vulkan-entrypoint.sh /etc/vulkan-entrypoint.sh
 RUN chmod 755 /etc/vulkan-entrypoint.sh 
 
 USER ${USER}

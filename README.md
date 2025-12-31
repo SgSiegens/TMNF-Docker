@@ -33,6 +33,9 @@ This repository provides two Dockerfiles: `Dockerfile.base` and `Dockerfile.vulk
 all necessary software, utilizing VirtualGL for rendering. The Vulkan Dockerfile builds on top of the base image and serves as an extension that installs Vulkan and DXVK into the 
 environment. It sets DXVK as the default rendering backend when running TMNF through Wine.
 
+Regardless of which variant you build, the container starts as the predefined user `wineuser`. The Wine prefix 
+automatically corresponds to the `.wine/` directory located in the `wineuser` home folder.
+
 ### Build the Base Image
 Clone the repository and build the image by running:
 ```bash
